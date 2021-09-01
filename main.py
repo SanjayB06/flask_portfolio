@@ -27,9 +27,6 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/Sanjay/')
-def Sanjay():
-    return render_template("Sanjay.html")
 
 @app.route('/Videos/')
 def Videos():
