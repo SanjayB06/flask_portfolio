@@ -26,6 +26,14 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+@app.route('/Greet-Pages/Sanjay/')
+def Sanjay():
+    return render_template("Greet-Pages/Sanjay.html")
+
+@app.route('/Greet-Pages/Matthew/')
+def Matthew():
+    return render_template("Greet-Pages/Matthew.html")
+
 @app.route('/Greet-Pages/gavin/')
 def gavin():
     return render_template("Greet-Pages/gavin.html")
@@ -47,6 +55,26 @@ def greet_gavin():
             return render_template("Greet-Pages/gavin.html", name=name)
     # starting and empty input default
     return render_template("Greet-Pages/gavin.html", name="World")
+
+@app.route('/greet_Sanjay', methods=['GET', 'POST'])
+def greet_Sanjay():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Greet-Pages/Sanjay.html", name=name)
+    # starting and empty input default
+    return render_template("Greet-Pages/Sanjay.html", name="World")
+
+@app.route('/greet_Matthew', methods=['GET', 'POST'])
+def greet_Matthew():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Greet-Pages/Matthew.html", name=name)
+    # starting and empty input default
+    return render_template("Greet-Pages/Matthew.html", name="World")
 
 if __name__ == "__main__":
     app.run(debug=True)
