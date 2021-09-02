@@ -1,0 +1,23 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<h1>Greet Directory</h1>
+    <div class="sanjay">
+        <a href="/Greet-Pages/Sanjay"><h3>Link to Sanjay's Greet Page</h3></a>
+    </div>
+    <div class="Matthew">
+        <a href="/Greet-Pages/Matthew"><h3>Link to Matthew's Greet Page</h3></a>
+    </div>
+    <div class="gavin">
+        <a href="/Greet-Pages/gavin"><h3>Link to Gavin's Greet Page</h3></a>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
