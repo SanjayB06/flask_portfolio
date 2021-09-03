@@ -23,3 +23,15 @@ Starter code should be fun and practical.
 ### IDE management (things that happened beyond plan)
 #### Recall on ".gitignore" solution to the pains of temporary files.  Start a ".gitignore" and avoid promoting temporary files to Git, for instance IDE xml files.
 #### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
+
+
+#### Table of Contents 
+#### Create a greet directory 
+#### add buttons to Greet Directory
+#### integrate greet for each member 
+#### integrate video journal into the webpage e
+#### wireframe for Nav Bar 
+#### Wireframe 3 theme pages
+#### Wireframe About Page
+#### Wireframe MiniLabs Page
+#### filler
