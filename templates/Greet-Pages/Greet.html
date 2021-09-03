@@ -6,15 +6,32 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <style>
+        .flex-parent{
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .greet_page {
+            border-radius: 25px;
+            width: 20%
+        }
+    </style>
 <h1>Greet Directory</h1>
-    <div class="sanjay">
-        <a href="/Greet-Pages/Sanjay"><h3>Link to Sanjay's Greet Page</h3></a>
-    </div>
-    <div class="Matthew">
-        <a href="/Greet-Pages/Matthew"><h3>Link to Matthew's Greet Page</h3></a>
-    </div>
-    <div class="gavin">
-        <a href="/Greet-Pages/gavin"><h3>Link to Gavin's Greet Page</h3></a>
+    <div class="flex-parent">
+        <div class="greet_page btn">
+            <a href="/Greet-Pages/Sanjay"><h3>Sanjay</h3></a>
+        </div>
+        <div class="greet_page btn">
+            <a href="/Greet-Pages/Matthew"><h3>Matthew</h3></a>
+        </div>
+        <div class="greet_page btn">
+            <a href="/Greet-Pages/gavin"><h3>Gavin</h3></a>
+        </div>
+        <div class="greet_page btn">
+            <a href="/Greet-Pages/samuel"><h3>Samuel</h3></a>
+        </div>
     </div>
 {% endblock %}
 
