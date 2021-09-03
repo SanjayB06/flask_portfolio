@@ -31,7 +31,7 @@ def Sanjay():
     return render_template("Greet-Pages/Sanjay.html")
 
 
-@app.route('/Greet-Pages/Samuel/')
+@app.route('/Greet-Pages/samuel/')
 def Samuel():
     return render_template("Greet-Pages/samuel.html")
 
