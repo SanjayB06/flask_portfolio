@@ -48,9 +48,9 @@ def gavin():
 def Videos():
     return render_template("Videos.html")
 
-@app.route('/Greet-Pages/Greet/')
-def Greet():
-    return render_template("Greet-Pages/Greet.html")
+@app.route('/Greet-Pages/MiniLabs/')
+def MiniLabs():
+    return render_template("Greet-Pages/MiniLabs.html")
 
 @app.route('/greet_gavin', methods=['GET', 'POST'])
 def greet_gavin():

@@ -26,6 +26,7 @@ Starter code should be fun and practical.
 
 
 #### Table of Contents 
+#### week 2 ------------------------------------------------------------------------
 #### Create a greet directory 
 #### add buttons to Greet Directory
 #### integrate greet for each member 
@@ -34,5 +35,6 @@ Starter code should be fun and practical.
 #### Wireframe 3 theme pages
 #### Wireframe About Page
 #### Wireframe MiniLabs Page
-#### work on grades 
+#### Work on grades 
+#### Week 3 ------------------------------------------------------------------------
 #### 
