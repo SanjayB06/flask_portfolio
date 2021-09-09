@@ -38,4 +38,5 @@ Starter code should be fun and practical.
 #### Week 3 ------------------------------------------------------------------------
 #### Wireframe MiniLabs Page [https://github.com/SanjayB06/flask_portfolio/issues/2]
 #### Learn about Binary and update journal [https://github.com/SanjayB06/flask_portfolio/issues/15]
-#### 
+#### Update readme file [https://github.com/SanjayB06/flask_portfolio/blob/main/README.md]
+#### Updated Matthew.html []
