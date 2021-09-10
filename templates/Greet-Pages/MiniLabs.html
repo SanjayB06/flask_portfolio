@@ -2,37 +2,90 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+{% set project = "Mini Labs" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <style>
-        .flex-parent{
-            display: flex;
-            width: 80%;
-            margin: 0 auto;
-            justify-content: space-between;
+        h1 {
+            text-align:center;
         }
-        .greet_page {
+        .tangible {
+            /*border: red 2px solid;*/
+            margin: 15px;
             border-radius: 25px;
-            width: 20%
+            padding: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            transition: box-shadow 500ms;
+            background-color: #404E74;
         }
+        .tangible:hover {
+            box-shadow: 0 19px 59px 0 rgba(0, 0, 0, 0.7);
+        }
+        img {
+            width: 100%;
+        }
+
+        .flex-parent {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5em;
+            flex-wrap: wrap;
+        }
+
     </style>
-<h1>Greet Directory</h1>
-    <div class="flex-parent">
-        <div class="greet_page btn">
-            <a href="/Greet-Pages/Sanjay"><h3>Sanjay</h3></a>
+<h1>Mini Labs</h1>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm tangible">
+            <h3>Greet Mini Lab and About Pages</h3>
+            <img src="/static/assets/PythonFlask.jpeg" alt="greet page">
+                <div class="flex-parent">
+                    <div class="greet_page">
+                        <a href="/Greet-Pages/Sanjay">Sanjay</a>
+                    </div>
+                    <div class="greet_page">
+                        <a href="/Greet-Pages/Matthew">Matthew</a>
+                    </div>
+                    <div class="greet_page">
+                        <a href="/Greet-Pages/gavin">Gavin</a>
+                    </div>
+                    <div class="greet_page">
+                        <a href="/Greet-Pages/samuel">Samuel</a>
+                    </div>
+                </div>
         </div>
-        <div class="greet_page btn">
-            <a href="/Greet-Pages/Matthew"><h3>Matthew</h3></a>
+
+        <div class="col-sm tangible">
+            <h3>Pair Share Journals</h3>
+                <div class="btn"><a href="https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing">Matthew and Gavin's Pair Share Journal</a></div>
+                <div class="btn"><a href="https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing">Sanjay and Samuel's Pair Share Journal</a></div>
         </div>
-        <div class="greet_page btn">
-            <a href="/Greet-Pages/gavin"><h3>Gavin</h3></a>
+
+        <div class="col-sm tangible">
+            <h3>Wireframing Activity from Week 2</h3>
+            <br>
+            <img src="/static/assets/Wireframew2.png" alt="Wireframing Activity done on Week 2 to demonstrate Collaboration and Design Skills">
         </div>
-        <div class="greet_page btn">
-            <a href="/Greet-Pages/samuel"><h3>Samuel</h3></a>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm tangible">
+            <h3>TPT Week 3</h3>
+                <div class="btn"><a href="https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.bwxavk4uggep">Samuel & Sanjay</a></div>
+                <div class="btn"><a href="https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit#bookmark=id.gxwsekd3opq4">Matthew and Gavin</a></div>
+        </div>
+        <div class="col-sm tangible">
+            <a href="./templates/binarylab.html">binary</a>
+        </div>
+        <div class="col-sm tangible">
+            <h3>Video Journals</h3>
+            <a href="/Greet-Pages/Videos"><img src="/static/assets/vidicon.png" alt="Video Journals"></a>
         </div>
     </div>
+</div>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

@@ -1,6 +1,21 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<style>
+
+    a.nav-link {
+        background-color: rgba(255, 0, 0, 0.0);
+        transition: background-color 0.5s;
+        color: #cc0000;
+    }
+    a.nav-link:hover {
+        background-color: #1da1f2;
+    }
+    nav {
+        background-image: linear-gradient(to right, #1b0089ff, #000000ff);
+    }
+
+</style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +30,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="/Greet-Pages/MiniLabs">MiniLabs</a>
-            <a class="nav-link" href="/Videos">Video Journals</a>
+            <a class="nav-link" href="/Binary_lab">Binary</a>
         </div>
     </div>
 </nav>
