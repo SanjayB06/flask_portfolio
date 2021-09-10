@@ -27,14 +27,16 @@ Starter code should be fun and practical.
 
 #### Table of Contents 
 #### week 2 ------------------------------------------------------------------------
-#### Create a greet directory 
-#### add buttons to Greet Directory
-#### integrate greet for each member 
-#### integrate video journal into the webpage e
-#### wireframe for Nav Bar 
-#### Wireframe 3 theme pages
-#### Wireframe About Page
-#### Wireframe MiniLabs Page
+#### Create a greet directory [https://github.com/SanjayB06/flask_portfolio/issues/8]
+#### add buttons to Greet Directory [https://github.com/SanjayB06/flask_portfolio/issues/9]
+#### integrate greet for each member [https://github.com/SanjayB06/flask_portfolio/issues/6]
+#### integrate video journal into the webpage [https://github.com/SanjayB06/flask_portfolio/issues/7]
+#### wireframe for Nav Bar [https://github.com/SanjayB06/flask_portfolio/issues/5]
+#### Wireframe 3 theme pages [https://github.com/SanjayB06/flask_portfolio/issues/4]
+#### Wireframe About Page [https://github.com/SanjayB06/flask_portfolio/issues/3]
 #### Work on grades 
 #### Week 3 ------------------------------------------------------------------------
-#### 
+#### Wireframe MiniLabs Page [https://github.com/SanjayB06/flask_portfolio/issues/2]
+#### Learn about Binary and update journal [https://github.com/SanjayB06/flask_portfolio/issues/15]
+#### Update readme file [https://github.com/SanjayB06/flask_portfolio/blob/main/README.md]
+#### Updated Matthew.html []
