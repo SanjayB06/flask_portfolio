@@ -32,10 +32,19 @@ Starter code should be fun and practical.
 
 ## Table of Contents
 ## 1.[Contributors](https://github.com/SanjayB06/flask_portfolio/graphs/contributors)
-## 2.[Pair Share Journal 1 Gavin & Matthew](## AP CSP Period 4: Team Gaico)
-## 2.5 [Pair Share Journal 2 Samuel & Sanjay]()
+## 2.[Pair Share Journal 1 Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
+## 2.5 [Pair Share Journal 2 Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 ## 3. Project Ideation - We are going to make a trivia game 
 ## 4. Sprint 0: Introduction - we installed intellij, we made a fork of the repository, setup intellij
 
 ## Contributors 
-|Sanjay| [SanjayB06](https://github.com/SanjayB06) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/SanjayB06) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3A+sanjayb06)
+|Sanjay| [SanjayB06](https://github.com/SanjayB06) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/SanjayB06) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=SanjayB06)
+|Matthew| [Pqhantom](https://github.com/Pqhantom) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Pqhantom) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Apqhantom) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Pqhantom)
+|Gavin| [GavinYWu](https://github.com/GavinYWu) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/GavinYWu) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Agavinywu) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=GavinYWu)
+|Samuel| [Samuelwaang](https://github.com/Samuelwaang) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Samuelwaang) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asamuelwaang) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Samuelwaang) 
+
+## Pair Share Journals
+[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
+[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
+
+##
