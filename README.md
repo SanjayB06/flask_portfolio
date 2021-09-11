@@ -1,3 +1,4 @@
+## AP CSP Period 4: Team Gaico
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
@@ -31,8 +32,10 @@ Starter code should be fun and practical.
 
 ## Table of Contents
 ## 1.[Contributors](https://github.com/SanjayB06/flask_portfolio/graphs/contributors)
-## 2.[Pair Share Journals]()
-[https://github.com/SanjayB06/flask_portfolio#bob]
+## 2.[Pair Share Journal 1 Gavin & Matthew](## AP CSP Period 4: Team Gaico)
+## 2.5 [Pair Share Journal 2 Samuel & Sanjay]()
+## 3. Project Ideation - We are going to make a trivia game 
+## 4. Sprint 0: Introduction - we installed intellij, we made a fork of the repository, setup intellij
 
-
-#bob
+## Contributors 
+|Sanjay| [SanjayB06](https://github.com/SanjayB06) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/SanjayB06) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3A+sanjayb06)
