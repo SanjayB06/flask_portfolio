@@ -25,18 +25,14 @@ Starter code should be fun and practical.
 #### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
 
 
-#### Table of Contents 
-#### week 2 ------------------------------------------------------------------------
-#### Create a greet directory [https://github.com/SanjayB06/flask_portfolio/issues/8]
-#### add buttons to Greet Directory [https://github.com/SanjayB06/flask_portfolio/issues/9]
-#### integrate greet for each member [https://github.com/SanjayB06/flask_portfolio/issues/6]
-#### integrate video journal into the webpage [https://github.com/SanjayB06/flask_portfolio/issues/7]
-#### wireframe for Nav Bar [https://github.com/SanjayB06/flask_portfolio/issues/5]
-#### Wireframe 3 theme pages [https://github.com/SanjayB06/flask_portfolio/issues/4]
-#### Wireframe About Page [https://github.com/SanjayB06/flask_portfolio/issues/3]
-#### Work on grades 
-#### Week 3 ------------------------------------------------------------------------
-#### Wireframe MiniLabs Page [https://github.com/SanjayB06/flask_portfolio/issues/2]
-#### Learn about Binary and update journal [https://github.com/SanjayB06/flask_portfolio/issues/15]
-#### Update readme file [https://github.com/SanjayB06/flask_portfolio/blob/main/README.md]
-#### Updated Matthew.html []
+## AP CSP Period 4: Team Gaico
+## [Scrum Board](https://github.com/SanjayB06/flask_portfolio/projects)
+## [insights with Contributors and Commits](https://github.com/SanjayB06/flask_portfolio/graphs/contributors)
+
+## Table of Contents
+## 1.[Contributors](https://github.com/SanjayB06/flask_portfolio/graphs/contributors)
+## 2.[Pair Share Journals]()
+[https://github.com/SanjayB06/flask_portfolio#bob]
+
+
+#bob
