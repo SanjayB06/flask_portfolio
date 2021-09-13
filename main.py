@@ -44,13 +44,18 @@ def Matthew():
 def gavin():
     return render_template("Greet-Pages/gavin.html")
 
-@app.route('/Videos/')
+@app.route('/Greet-Pages/Videos/')
 def Videos():
-    return render_template("Videos.html")
+    return render_template("Greet-Pages/Videos.html")
 
-@app.route('/Greet-Pages/Greet/')
-def Greet():
-    return render_template("Greet-Pages/Greet.html")
+@app.route('/Greet-Pages/MiniLabs/')
+def MiniLabs():
+    return render_template("Greet-Pages/MiniLabs.html")
+
+@app.route('/Binary_lab/')
+def Binary_lab():
+    return render_template("Binary_lab.html")
+
 
 @app.route('/greet_gavin', methods=['GET', 'POST'])
 def greet_gavin():
@@ -91,6 +96,5 @@ def greet_samuel():
             return render_template("Greet-Pages/samuel.html", name=name)
     # starting and empty input default
     return render_template("Greet-Pages/samuel.html", name="World")
-
 if __name__ == "__main__":
     app.run(debug=True)

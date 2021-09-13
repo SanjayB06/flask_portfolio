@@ -6,8 +6,15 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <style>
+    .paragraph {
+        width: 50%;
+        border: 2px yellow solid
+    .
+    }
+    </style>
     <!- Try building a new body here ->
-    <p>Tech Talk 1 - Body Stub</p>
+
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
@@ -23,9 +30,13 @@
     </div>
 
     <div class="col-12">
-        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+        <img src="/static/assets/PythonFlask.jpeg" style="height: 50px" >
     </div>
 
+    <div class="paragraph"><p>I am Matthew. I have a pet rock. </p> </div>
+
+
+    <img src="/static/assets/clear%20rock.png" alt="no">
 
 {% endblock %}
 
