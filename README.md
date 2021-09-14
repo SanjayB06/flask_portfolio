@@ -55,3 +55,9 @@ Starter code should be fun and practical.
 
 ##Project Ideation:
 ##Idea: A fun and interactive trivia game/website that can be used as a studying tool or simply just for fun. 
+| Names | Link to Commits |
+| - | - |
+|Sanjay|[Dummy Text](https://www.lipsum.com/)
+|Gavin|[Dummy Text](https://www.lipsum.com/)
+|Matthew|[Dummy Text](https://www.lipsum.com/)
+|Samuel|[Dummy Text](https://www.lipsum.com/)
