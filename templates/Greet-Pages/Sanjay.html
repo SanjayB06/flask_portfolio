@@ -6,26 +6,42 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <style>
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    .smb_container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    </style>
     <!- Try building a new body here ->
-    <p>Tech Talk 1 - Body Stub</p>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="smb_container">
+        <h1>Sanjay Bharadwaj</h1>
 
-        <div class="col-12">
-            <p>Hello, {{name}}!</p>
-        </div>
+        <h2>Greet MiniLab</h2>
+        <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
 
-        <div class="col-12">
-            <form action="/greet_Sanjay" id="greet" method="POST" >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
+            <div class="col-12">
+                <p>Hello, {{name}}!</p>
+            </div>
 
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-        </div>
+            <div class="col-12">
+                <form action="/greet_Sanjay" id="greet" method="POST" >
+                    <label for="name">Type a greeting name?</label>
+                    <input name="name" id="name">
+                    <input type="submit" value="Greetings!">
+                </form>
+            </div>
 
+            <div class="col-12">
+                <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+            </div>
+
+    </div>
 
 {% endblock %}
 

@@ -52,10 +52,9 @@ def Videos():
 def MiniLabs():
     return render_template("Greet-Pages/MiniLabs.html")
 
-@app.route('/Binary_lab/')
-def Binary_lab():
-    return render_template("Binary_lab.html")
-
+@app.route('/Greet-Pages/binary/')
+def binary():
+    return render_template("Greet-Pages/binary.html")
 
 @app.route('/greet_gavin', methods=['GET', 'POST'])
 def greet_gavin():
