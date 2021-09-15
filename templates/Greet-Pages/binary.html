@@ -19,12 +19,13 @@
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/lightbulb on.png" %}
-{% set imgBulbOff = "/static/assets/lightbulb off.png" %}
+{% set imgBulbOn = "/static/assets/bulb_on2.png" %}
+{% set imgBulbOff = "/static/assets/bulb_off2.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
 {% block meta %}
+
     <title>Binary page</title>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
@@ -171,6 +172,10 @@
 
         </div>
     </div>
+    <style>
+    body {
+        background-color: #92cbdc;
+    }
 {% endblock %}
 
 {% block background %}
