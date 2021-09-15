@@ -66,6 +66,16 @@ def greet_Sanjay():
     # starting and empty input default
     return render_template("Greet-Pages/Sanjay.html", name="World")
 
+@app.route('/binary_input', methods=['GET', 'POST'])
+def binary_input():
+    # submit button has been pushed
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("Greet-Pages/binary.html", bits=bits)
+    # starting and empty input default
+    return render_template("Greet-Pages/binary.html", name=8)
+
 @app.route('/greet_Matthew', methods=['GET', 'POST'])
 def greet_Matthew():
     # submit button has been pushed
