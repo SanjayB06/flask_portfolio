@@ -52,20 +52,9 @@ def Videos():
 def MiniLabs():
     return render_template("Greet-Pages/MiniLabs.html")
 
-@app.route('/Binary_lab/')
-def Binary_lab():
-    return render_template("Binary_lab.html")
-
-
-@app.route('/greet_gavin', methods=['GET', 'POST'])
-def greet_gavin():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("Greet-Pages/gavin.html", name=name)
-    # starting and empty input default
-    return render_template("Greet-Pages/gavin.html", name="World")
+@app.route('/Greet-Pages/binary/')
+def binary():
+    return render_template("Greet-Pages/binary.html")
 
 @app.route('/greet_Sanjay', methods=['GET', 'POST'])
 def greet_Sanjay():
