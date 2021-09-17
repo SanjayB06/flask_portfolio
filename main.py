@@ -85,7 +85,7 @@ def binary_input():
         if len(bits) != 0:  # input field has content
             return render_template("Greet-Pages/binary.html", bits=bits)
     # starting and empty input default
-    return render_template("Greet-Pages/binary.html", name=8)
+    return render_template("Greet-Pages/binary.html", bits=8)
 
 @app.route('/greet_Matthew', methods=['GET', 'POST'])
 def greet_Matthew():
@@ -106,5 +106,9 @@ def greet_samuel():
             return render_template("Greet-Pages/samuel.html", name=name)
     # starting and empty input default
     return render_template("Greet-Pages/samuel.html", name="World")
+
+@app.route('/test/')
+def test():
+    return render_template('test.html')
 if __name__ == "__main__":
     app.run(debug=True)
