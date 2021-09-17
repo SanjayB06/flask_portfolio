@@ -51,10 +51,9 @@ def Videos():
 @app.route('/Greet-Pages/MiniLabs/')
 def MiniLabs():
     return render_template("Greet-Pages/MiniLabs.html")
-
-@app.route('/Greet-Pages/binary/')
+"""@app.route('/Greet-Pages/binary/')
 def binary():
-    return render_template("Greet-Pages/binary.html")
+    return render_template("Greet-Pages/binary.html")"""
 
 
 @app.route('/greet_gavin', methods=['GET', 'POST'])
@@ -77,16 +76,15 @@ def greet_Sanjay():
     # starting and empty input default
     return render_template("Greet-Pages/Sanjay.html", name="World")
 
-@app.route('/binary_input', methods=['GET', 'POST'])
-def binary_input():
-    # submit button has been pushed
-    if request.form:
-        bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
-            return render_template("Greet-Pages/binary.html", bits=bits)
-    # starting and empty input default
-    return render_template("Greet-Pages/binary.html", bits=8)
-
+@app.route("/Greet-Pages/binary/", methods = ['GET', 'POST'])
+def binary():
+    BITS = 4
+    imgBulbOn = "/static/assets/bulb_on.gif"
+    # second time you call it, its a post action
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        imgBulbOn = request.form['lightOn']
+    return render_template("Greet-Pages/binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
 @app.route('/greet_Matthew', methods=['GET', 'POST'])
 def greet_Matthew():
     # submit button has been pushed
