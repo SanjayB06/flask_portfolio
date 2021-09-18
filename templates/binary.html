@@ -12,7 +12,7 @@
         <li><a href="http://127.0.0.1:5000/walruses/">Walruses</a></li>
         <li><a href="http://127.0.0.1:5000/hawkers/">Hawkers</a></li>
         <li><a href="http://127.0.0.1:5000/Greet-Pages/MiniLabs/">MiniLabs</a></li>
-        <li><a href="http://127.0.0.1:5000/Greet-Pages/binary/">Binary</a></li>
+        <li><a href="http://127.0.0.1:5000/binary/">Binary</a></li>
         <li>
             <div class="dropdown">
                 <a href="#" class="dropbtn">Greet &#9660;</a>
@@ -29,19 +29,19 @@
     </ul>
 </nav>
 <h1 class="text-center">Binary Math with Conversions</h1>
-<form action="/Greet-Pages/binary/" method="post">
-        <label>Bits:</label>
-        <input type="text" name="BITS" value={{ BITS }}><br>
-        <p>Choose a lightBulb</p>
-        {#code found on w3 c#}
-        <input type="radio" name="lightOn" value="/static/assets/bulb_on.gif" checked>
-        <img src="/static/assets/bulb_on.gif" height="50">
-        <input type="radio" name="lightOn" value="/static/assets/ncs_logo.png">
-        <img src="/static/assets/bulb_off2.png" height="50">
+<form action="/binary/" method="post">
+    <label>Bits:</label>
+    <input type="text" name="BITS" value={{ BITS }}><br>
+    <p>Choose a lightBulb</p>
+    {#code found on w3 c#}
+    <input type="radio" name="lightOn" value="/static/assets/bulb_on.gif" checked>
+    <img src="/static/assets/bulb_on.gif" height="50">
+    <input type="radio" name="lightOn" value="/static/assets/bulb_off2.png">
+    <img src="/static/assets/bulb_off2.png" height="50">
 
 
-        <br>
-        <input type="submit" value="Submit">
+    <br>
+    <input type="submit" value="Submit">
 
 </form>
 <!-- Hack: use 8 as default -->
