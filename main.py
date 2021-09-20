@@ -26,31 +26,34 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/Sanjay/')
+@app.route('/Greet-Pages/Sanjay/')
 def Sanjay():
-    return render_template("Sanjay.html")
+    return render_template("Greet-Pages/Sanjay.html")
 
 
-@app.route('/samuel/')
+@app.route('/Greet-Pages/samuel/')
 def Samuel():
-    return render_template("samuel.html")
+    return render_template("Greet-Pages/samuel.html")
 
 
-@app.route('/Matthew/')
+@app.route('/Greet-Pages/Matthew/')
 def Matthew():
-    return render_template("Matthew.html")
+    return render_template("Greet-Pages/Matthew.html")
 
-@app.route('/gavin/')
+@app.route('/Greet-Pages/gavin/')
 def gavin():
-    return render_template("gavin.html")
+    return render_template("Greet-Pages/gavin.html")
 
-@app.route('/Videos/')
+@app.route('/Greet-Pages/Videos/')
 def Videos():
-    return render_template("Videos.html")
+    return render_template("Greet-Pages/Videos.html")
 
-@app.route('/MiniLabs/')
+@app.route('/Greet-Pages/MiniLabs/')
 def MiniLabs():
-    return render_template("MiniLabs.html")
+    return render_template("Greet-Pages/MiniLabs.html")
+"""@app.route('/Greet-Pages/binary/')
+def binary():
+    return render_template("Greet-Pages/binary.html")"""
 
 
 @app.route('/greet_gavin', methods=['GET', 'POST'])
@@ -59,9 +62,9 @@ def greet_gavin():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("gavin.html", name=name)
+            return render_template("Greet-Pages/gavin.html", name=name)
     # starting and empty input default
-    return render_template("gavin.html", name="World")
+    return render_template("Greet-Pages/gavin.html", name="World")
 
 @app.route('/greet_Sanjay', methods=['GET', 'POST'])
 def greet_Sanjay():
@@ -69,11 +72,11 @@ def greet_Sanjay():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Sanjay.html", name=name)
+            return render_template("Greet-Pages/Sanjay.html", name=name)
     # starting and empty input default
-    return render_template("Sanjay.html", name="World")
+    return render_template("Greet-Pages/Sanjay.html", name="World")
 
-@app.route("/binary/", methods = ['GET', 'POST'])
+@app.route("/Greet-Pages/binary/", methods = ['GET', 'POST'])
 def binary():
     BITS = 4
     imgBulbOn = "/static/assets/bulb_on.gif"
@@ -81,17 +84,16 @@ def binary():
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         imgBulbOn = request.form['lightOn']
-    return render_template("binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
-
+    return render_template("Greet-Pages/binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
 @app.route('/greet_Matthew', methods=['GET', 'POST'])
 def greet_Matthew():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Matthew.html", name=name)
+            return render_template("Greet-Pages/Matthew.html", name=name)
     # starting and empty input default
-    return render_template("Matthew.html", name="World")
+    return render_template("Greet-Pages/Matthew.html", name="World")
 
 @app.route('/greet_samuel', methods=['GET', 'POST'])
 def greet_samuel():
@@ -99,10 +101,12 @@ def greet_samuel():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("samuel.html", name=name)
+            return render_template("Greet-Pages/samuel.html", name=name)
     # starting and empty input default
-    return render_template("samuel.html", name="World")
+    return render_template("Greet-Pages/samuel.html", name="World")
 
-
+@app.route('/test/')
+def test():
+    return render_template('test.html')
 if __name__ == "__main__":
     app.run(debug=True)
