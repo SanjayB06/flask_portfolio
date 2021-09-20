@@ -1,6 +1,32 @@
 ## AP CSP Period 4: Team Gaico
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
+
+## Contributors
+| Names | Profile | Tasks | Scrumboard | Commits|
+| - | - | - | - | - |
+|Sanjay| [SanjayB06](https://github.com/SanjayB06) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/SanjayB06) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=SanjayB06)  
+|Matthew| [Pqhantom](https://github.com/Pqhantom) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Pqhantom) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Apqhantom) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Pqhantom)  
+|Gavin| [GavinYWu](https://github.com/GavinYWu) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/GavinYWu) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Agavinywu) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=GavinYWu)  
+|Samuel| [Samuelwaang](https://github.com/Samuelwaang) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Samuelwaang) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asamuelwaang) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Samuelwaang)
+
+## Pair Share Journals
+| Names | Journal |
+| - | - |
+|Sanjay|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
+|Gavin|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
+|Matthew|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
+|Samuel|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
+
+##Project Ideation:
+##Idea: A fun and interactive trivia game/website that can be used as a studying tool or simply just for fun.
+| Names | Link to Commits |
+| - | - |
+|Sanjay|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=SanjayB06)
+|Gavin|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Pqhantom)
+|Matthew|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=GavinYWu)
+|Samuel|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Samuelwaang)
+
 ### Idea
 Starter code should be fun and practical.
 ### Visual thoughts
@@ -36,28 +62,3 @@ Starter code should be fun and practical.
 ## 2.5 [Pair Share Journal 2 Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 ## 3. Project Ideation - We are going to make a trivia game
 ## 4. Sprint 0: Introduction - we installed intellij, we made a fork of the repository, setup intellij
-
-## Contributors
-| Names | Profile | Tasks | Scrumboard | Commits|
-| - | - | - | - | - |
-|Sanjay| [SanjayB06](https://github.com/SanjayB06) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/SanjayB06) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asanjayb06) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=SanjayB06)  
-|Matthew| [Pqhantom](https://github.com/Pqhantom) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Pqhantom) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Apqhantom) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Pqhantom)  
-|Gavin| [GavinYWu](https://github.com/GavinYWu) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/GavinYWu) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Agavinywu) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=GavinYWu)  
-|Samuel| [Samuelwaang](https://github.com/Samuelwaang) | [Tasks](https://github.com/SanjayB06/flask_portfolio/issues/assigned/Samuelwaang) | [Scrumboard](https://github.com/SanjayB06/flask_portfolio/projects/1?card_filter_query=assignee%3Asamuelwaang) | [Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Samuelwaang)
-
-## Pair Share Journals
-| Names | Journal |
-| - | - |
-|Sanjay|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
-|Gavin|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
-|Matthew|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
-|Samuel|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
-
-##Project Ideation:
-##Idea: A fun and interactive trivia game/website that can be used as a studying tool or simply just for fun. 
-| Names | Link to Commits |
-| - | - |
-|Sanjay|[Dummy Text](https://www.lipsum.com/)
-|Gavin|[Dummy Text](https://www.lipsum.com/)
-|Matthew|[Dummy Text](https://www.lipsum.com/)
-|Samuel|[Dummy Text](https://www.lipsum.com/)
