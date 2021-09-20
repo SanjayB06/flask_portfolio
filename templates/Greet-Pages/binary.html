@@ -29,15 +29,23 @@
     </ul>
 </nav>
 <h1 class="text-center">Binary Math with Conversions</h1>
-<div id="form">
-    <form action="/binary_input" id="binary_input" method="POST" id="form2" >
-        <label for="name">How many bits?</label>
-        <input name="bits" id="bits">
-        <input type="submit" value="Enter">
-    </form>
-</div>
+<form action="/Greet-Pages/binary/" method="post">
+        <label>Bits:</label>
+        <input type="text" name="BITS" value={{ BITS }}><br>
+        <p>Choose a lightBulb</p>
+        {#code found on w3 c#}
+        <input type="radio" name="lightOn" value="/static/assets/bulb_on.gif" checked>
+        <img src="/static/assets/bulb_on.gif" height="50">
+        <input type="radio" name="lightOn" value="/static/assets/ncs_logo.png">
+        <img src="/static/assets/bulb_off2.png" height="50">
+
+
+        <br>
+        <input type="submit" value="Submit">
+
+</form>
 <!-- Hack: use 8 as default -->
-{% set BITS = 16 %}
+
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
