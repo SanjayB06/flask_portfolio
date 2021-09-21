@@ -104,5 +104,5 @@ def greet_samuel():
     return render_template("samuel.html", name="World")
 
 
-
+if __name__ == "__main__":
     app.run(debug=True)
