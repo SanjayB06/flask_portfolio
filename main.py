@@ -103,6 +103,9 @@ def greet_samuel():
     # starting and empty input default
     return render_template("samuel.html", name="World")
 
+@app.route('/rgb_gavin/')
+def rgb_gavin():
+    return render_template('rgb_gavin.html', images=image_data())
 
-
+if __name__ == "__main__":
     app.run(debug=True)

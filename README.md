@@ -18,14 +18,22 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Matthew|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
 |Samuel|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 
-##Project Ideation:
-##Idea: A fun and interactive trivia game/website that can be used as a studying tool or simply just for fun.
-| Names | Link to Commits |
-| - | - |
-|Sanjay|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=SanjayB06)
-|Gavin|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Pqhantom)
-|Matthew|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=GavinYWu)
-|Samuel|[Commits](https://github.com/SanjayB06/flask_portfolio/commits?author=Samuelwaang)
+### Week 4
+| Task | Description of Task | Link to Task|
+| - | - | - |
+|Dropdown Greet Menu|Add dropdown for greet menu|[Dropdown Greet Menu](https://github.com/SanjayB06/flask_portfolio/issues/32)|
+|Add binary.html to project|Add binary page to our project|[Add binary.html to project](https://github.com/SanjayB06/flask_portfolio/issues/30)|
+|Change Binary Background Color|Change the background color for binary page|[Change Binary Background Color](https://github.com/SanjayB06/flask_portfolio/issues/34)|
+|Change on/off switches on binary.html|Change the on and off light bulbs for binary page|[Change on/off switches on binary.html](https://github.com/SanjayB06/flask_portfolio/issues/31)|
+|ASCII Conversion|Add ASCII conversion for binary page|[ASCII Conversion](https://github.com/SanjayB06/flask_portfolio/issues/33)|
+|Design our own nav bar|Redesign our navbar for the project|[Design our own nav bar](https://github.com/SanjayB06/flask_portfolio/issues/36)|
+
+| Names | Description of what User did | Link to Commits|
+| - | - | - |
+|Sanjay|Enables ASCII Conversion based on binary switches <br> Fixes navbar on the binary page <br> Reorganizes directories and folders|[Sanjay About Page](https://github.com/SanjayB06/flask_portfolio/commit/8f38421b2715c46a5f13a7e5371f9a8871efca41) <br> [ASCII Conversion Enabled](https://github.com/SanjayB06/flask_portfolio/commit/dd5f95e085574d3e7f88cf86864b09690f033e9f) <br> [New NavBar on Binary Page](https://github.com/SanjayB06/flask_portfolio/commit/4f57bfd3ed4beb93f43367e441db7e563f523789) <br> [Reorganize Directories and Folders](https://github.com/SanjayB06/flask_portfolio/commit/2e562a931944237432224835740d2e076f5fa798)|
+|Gavin|Create tables for readme <br> Hard code bits to 16 <br> Add light bulbs <br> Remove the extra arrow on the dropdown on navbar|[Readme Table](https://github.com/SanjayB06/flask_portfolio/commit/76e35094670032efd53ac813c19f2702d0f78190) <br> [Set Hard Coded Bits to 16](https://github.com/SanjayB06/flask_portfolio/commit/390086fe89e57d2881c1f68544d2bdbefac409a7) <br> [Lightbulbs](https://github.com/SanjayB06/flask_portfolio/commit/aef138c9a1abdd09cb138c40067a7ad9c09be954) <br> [Fix Dropdown Issues](https://github.com/SanjayB06/flask_portfolio/commit/096d1b24503cae8da17ad2db7329baff5b5944f8)|
+|Matthew|Add about us dropdown <br> Change light bulb for binary page<br> Make binary page look very sexy <br> Fix ASCII and style binary page <br> Fix input on binary page|[Navbar Dropdown](https://github.com/SanjayB06/flask_portfolio/commit/6ff62453e82d3af9746028265558e12999687502) <br> [Navbar Formatting](https://github.com/SanjayB06/flask_portfolio/commit/538b799aa5c9ee95a913765aac659ae6f8dfc08f) <br> [Current Lightbulbs](https://github.com/SanjayB06/flask_portfolio/commit/a6ab8ef4b39fa824b4b1ff38a87be18bdccbae3c) <br> [Binary Formatting/Add Table](https://github.com/SanjayB06/flask_portfolio/commit/e72dccc7726f4c70c421f0777c9c0bf8857b2b96) <br> [Edit Ascii Conversion & Style Binary Page](https://github.com/SanjayB06/flask_portfolio/commit/7694dbd6fe1105ee983e66df2e469b4ec6c5916c) <br> [Binary Input Fixed](https://github.com/SanjayB06/flask_portfolio/commit/686b0f1760073d13d47f7e5040c1087cf62c70ee)|
+|Samuel|Attempt to change light bulbs for binary page <br> Change background color for binary page|[Change Binary Picture](https://github.com/SanjayB06/flask_portfolio/commit/f0f85bdf32b36ce36d2f43a5f7e208c0c9b0894d) <br> [Change Binary Background](https://github.com/SanjayB06/flask_portfolio/commit/cc174a16a5d1649a3e1b57ebaa2d7acb90ac44ad)|
 
 ### Idea
 Starter code should be fun and practical.
@@ -62,3 +70,6 @@ Starter code should be fun and practical.
 ## 2.5 [Pair Share Journal 2 Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 ## 3. Project Ideation - We are going to make a trivia game
 ## 4. Sprint 0: Introduction - we installed intellij, we made a fork of the repository, setup intellij
+
+##Project Ideation:
+##Idea: A fun and interactive trivia game/website that can be used as a studying tool or simply just for fun.
