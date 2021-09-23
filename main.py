@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-
+from image import image_data
 # create a Flask instance
 app = Flask(__name__)
 
@@ -103,6 +103,9 @@ def greet_samuel():
     # starting and empty input default
     return render_template("samuel.html", name="World")
 
+@app.route('/rgb_sanjay/')
+def rgb_sanjay():
+    return render_template('rgb_sanjay.html', images=image_data())
 
-
+if __name__ == "__main__":
     app.run(debug=True)
