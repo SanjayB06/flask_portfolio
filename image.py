@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFilter
 import numpy
 import base64
 from io import BytesIO
+from pathlib import Path
 
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
@@ -17,7 +18,7 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/assets/", img_list=None):  # path of static images is defaulted
+def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"}
@@ -28,11 +29,14 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
             #{'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
             #{'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
         ]
+
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
-        img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        file = path + img_dict['file']  # file with path for local access (backend)
-        # Python Image Library operations
+        #file = path + img_dict['file']  # file with path for local access (backend)
+        file = path / img_dict['file']  # file with path for local access (backend)
+
+    # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format

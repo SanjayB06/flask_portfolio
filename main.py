@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 from image import image_data
 # create a Flask instance
 app = Flask(__name__)
-
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 # connects default URL to render index.html
 @app.route('/')
@@ -59,7 +59,7 @@ def greet_gavin():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("Greet-Pages/templates/gavin.html", name=name)
+            return render_template("gavin.html", name=name)
     # starting and empty input default
     return render_template("gavin.html", name="World")
 
@@ -104,8 +104,12 @@ def greet_samuel():
     return render_template("samuel.html", name="World")
 
 @app.route('/rgb_sanjay/')
-def rgb_sanjay():
-    return render_template('rgb_sanjay.html', images=image_data())
+def rgb():
+    path = Path(app.root_path) / "static" / "assets"
+    return render_template('rgb.html', images=image_data(path))
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

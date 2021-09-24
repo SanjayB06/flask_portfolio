@@ -1,3 +1,1 @@
-flask~=1.1.2
-numpy
-Pillow~=8.2.0
+Flask
