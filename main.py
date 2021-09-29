@@ -103,7 +103,7 @@ def greet_samuel():
     # starting and empty input default
     return render_template("samuel.html", name="World")
 
-@app.route('/rgb_sanjay/')
+@app.route('/rgb/')
 def rgb():
     path = Path(app.root_path) / "static" / "assets"
     return render_template('rgb.html', images=image_data(path))
