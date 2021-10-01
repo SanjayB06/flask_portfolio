@@ -5,11 +5,9 @@
 
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         function toggleImage(ndx) {
-            if (document.getElementById("button1").value == "Gray")
-            {
-
+            if (document.getElementById("button1").value == "Gray") {
                 document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
-                document.getElementById("button").value = "Original";
+                document.getElementById("button1").value = "Original";
             }
             else
             {
@@ -86,7 +84,7 @@
                         </td>
                     </tr>
                 {% endfor %}
-                </tbody>
+
             </table>
 
         </div>
