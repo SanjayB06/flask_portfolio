@@ -15,6 +15,13 @@
     </center>
     </body>
 
+    <style>
+        img = Image.open('PythonFlask.jpeg')
+        d1 = ImageDraw.Draw(img)
+        d1.text((0, 0), "Sample text", font=myFont, fill =(255, 0, 0))
+        img.show()
+        img.save("images/image_text.jpg")
+    </style>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
@@ -42,6 +49,8 @@
         }
 
     </div>
+
+
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

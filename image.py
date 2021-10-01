@@ -38,6 +38,14 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
 
     # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+        d1 = ImageDraw.Draw(img_reference)
+        if img_dict['file'] == "white-square-16.png":
+            d1.text((0, 0), "Hi!",  fill =(255, 0, 0))
+        elif img_dict['file'] == "lassen-volcano-256.jpg":
+            d1.text((0, 0), "hello everyone")
+        else:
+            d1.text((0, 0), "Hi!")
+        img_reference.save(file)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
