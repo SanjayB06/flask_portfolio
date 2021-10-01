@@ -80,7 +80,7 @@ def binary():
     # second time you call it, its a post action
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
-        imgBulbOn = request.form['lightOn']
+
     return render_template("binary.html", imgBulbOn=imgBulbOn, BITS=BITS)
 
 @app.route('/greet_Matthew', methods=['GET', 'POST'])
