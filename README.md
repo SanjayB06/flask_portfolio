@@ -54,11 +54,11 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ## Week 6
 | Task | Description of Task | Link to Task|
 | - | - | - |
-|Research/Study sheet/journal - Bases|Take notes for base[Research/Study sheet/journal - Bases](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.72bb4e2ex44l)|
-|RGB Values with Image - Frontend|||
+|Research/Study sheet/journal - Bases|Take notes for base|[Research/Study sheet/journal - Bases](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.72bb4e2ex44l)|
+|RGB Values with Image - Frontend|Change||
 |RGB Values with an Image, Backend|||
 |RGB Values with an Image, New Development|||
-|Documentation|||
+|Documentation|Cite examples from code describing our project layout and explaining the layout files and reasoning behind organization|[Documentation](https://github.com/SanjayB06/flask_portfolio/issues/47)|
 |RGB Greyscale|||
 |RGB- adding text on image|||
 |Add Loop to RGB image Manipulation|||
@@ -67,7 +67,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 | Names | Description of what User did | Link to Tangible|
 | - | - | - |
 |Sanjay|Rename the RGB file <br> Add RGB to greyscale <br> Make greyscale able to toggle back to original|[RGB File rename](https://github.com/SanjayB06/flask_portfolio/commit/e837143e8a6a1befa57824e1b2409a63e8a03f6b) <br> [RGB grayscale](https://github.com/SanjayB06/flask_portfolio/commit/e28901583eb61988af8f6801ef7ba226b11ddd0d) <br> [RGB Grayscale Toggles back to Original](https://github.com/SanjayB06/flask_portfolio/commit/7ff6c0bd5971094ad6d2d1f0efcaa691d7a29700)|
-|Gavin|Adding loop to RGB image manipulation <br> adding image rotation <br> Add Week 6 table to Readme.md||
+|Gavin|Adding loop to RGB image manipulation <br> adding image rotation|[Adding Loop to RGB Image Manipulation](https://github.com/SanjayB06/flask_portfolio/commit/e2e7ea7c6cadb867726f18cd7de469c4b3fca82c) <br> [Adding Image Rotation](https://github.com/SanjayB06/flask_portfolio/commit/c0dfa0a104bc5329bebdff354e91d1afe118a6df)|
 |Matthew|Fix navbar by updating the addresses <br> FIx visual error on Binary page|[Refix Navbar](https://github.com/SanjayB06/flask_portfolio/commit/40f198437bf912604beb8f6eaf4dd39b2c8fa577) <br> [Remove Selector](https://github.com/SanjayB06/flask_portfolio/commit/3d8ec4848c66893da364ac1e25f95aaf749eae84)|
 |Samuel|Takes notes for base <br> Fix the table in the Binary page <br> Put text on the image in RGB page|[Research for Bases](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.72bb4e2ex44l)<br> [Fix Binary Table](https://github.com/SanjayB06/flask_portfolio/commit/086eecad33526b6b9a8327b7e14e6c6bd1acb89c) <br> [Put Text on Image in RGB](https://github.com/SanjayB06/flask_portfolio/commit/7d41e76255f340b7591a48e2b58181ad209362cc)|
 
