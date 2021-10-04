@@ -47,6 +47,12 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         else:
             d1.text((0, 0), "Hi!")
         img_reference.save(file)
+        rotated = img_reference.rotate(45)
+        if img_dict['file'] == "lassen-volcano-256.jpg":
+            rotated.show()
+        else:
+            img_dict['file'] == "white-square-16-png"
+        img_reference.save(file)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
