@@ -21,7 +21,8 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"}
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
+            {'source': "Geico", "label":"Geico Gecko", 'file': "GeicoGecko2.png"}
             #{'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             #{'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             #{'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
@@ -36,7 +37,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         #file = path + img_dict['file']  # file with path for local access (backend)
         file = path / img_dict['file']  # file with path for local access (backend)
 
-    # Python Image Library operations
+        # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         d1 = ImageDraw.Draw(img_reference)
         if img_dict['file'] == "white-square-16.png":
