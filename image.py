@@ -23,7 +23,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
             {'source': "Geico", "label":"Geico Gecko", 'file': "GeicoGecko2.png"}
-            #{'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
+            #{'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"}
             #{'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             #{'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
             #{'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
@@ -47,6 +47,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         else:
             d1.text((0, 0), "Hi!")
         img_reference.save(file)
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
