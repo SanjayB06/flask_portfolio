@@ -74,7 +74,12 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            document.getElementById('UNICODE').innerHTML = "U+" + String(parseInt(binary, 2).toString(16)) //String.fromCharCode(parseInt(binary, 2).toString(10));
+            document.getElementById('UNICODE').innerHTML =  String.fromCharCode(parseInt(binary, 2).toString(10));
+            if (parseInt(binary, 2).toString(10) < 128) {
+                document.getElementById('ASCII/UNICODE').innerText = "ASCII"
+            } else {
+                document.getElementById('ASCII/UNICODE').innerText = "UNICODE"
+            }
 
 
             /* Hack: show ASCII printable character(s) for each 8 bits
@@ -169,7 +174,7 @@
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
-                        <th>UNICODE</th>
+                        <th id="ASCII/UNICODE">UNICODE</th>
                         <th>Minus</th>
                         <th>Divide</th>
                     </tr>
