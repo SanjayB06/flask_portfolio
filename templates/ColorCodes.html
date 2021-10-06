@@ -1,0 +1,84 @@
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    {% set imgBulbOn = "/static/assets/bulb_on2.png" %}
+    {% set imgBulbOff = "/static/assets/bulb_off2.png" %}
+    {% set msgTurnOn = "Turn On" %}
+    {% set msgTurnOff = "Turn Off" %}
+<script>
+    const BITS = 24; let max = 47; let MAX = parseInt(max, 10);
+    function getBits() {
+        let bits = "";
+        for(let i = 0; i < BITS; i++) {
+            bits = bits + document.getElementById('digit' + i).value;
+        }
+        return bits;
+    }
+
+    function change_color(r,g,b) {
+        document.getElementById("color_code").style.backgroundColor = "rgb(35,34,23)"
+    }
+    function toggleBit(i) {
+        //alert("Digit action: " + i );
+        const dig = document.getElementById('digit' + i);
+        const image = document.getElementById('bulb' + i);
+        const butt = document.getElementById('butt' + i);
+        // Change digit and visual
+        if (image.src.match("{{ imgBulbOn }}")) {
+            dig.value = 0;
+            image.src = "{{ imgBulbOff }}";
+            butt.innerHTML = "{{ msgTurnOn }}";
+        } else {
+            dig.value = 1;
+            image.src = "{{ imgBulbOn }}";
+            butt.innerHTML = "{{ msgTurnOff }}";
+        }
+        // Binary numbers
+        const binary = getBits();
+        setConversions(binary);
+    }
+    function setConversions(binary) {
+        document.getElementById('color_code').style.backgroundColor = "#"+String(parseInt(binary, 2).toString(16));
+
+    }
+
+</script>
+    <style>
+    #color_code {
+        background-color: #FF0000;
+        width: 80%;
+        height: 30px;
+    }
+    </style>
+    <div class="col-12">
+        <table class="table">
+            <tr>
+                {% for i in range(24) %}
+                    <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in range(24) %}
+                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <div id="color_code"></div>
+    <p id="hex">0</p>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

@@ -110,6 +110,9 @@ def rgb():
     return render_template('rgb.html', images=image_data(path))
 
 
+@app.route('/ColorCodes/')
+def colorcodes():
+    return render_template("ColorCodes.html")
 
 
 if __name__ == "__main__":
