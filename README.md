@@ -77,7 +77,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 | Names | Description of what User did | Link to Tangible|
 | - | - | - |
-||||
+|Sanjay|ASCII/Unicode Conversion. Changing ASCII to UNICODE based on binary value. Left and Right Shift (muliplication and division) on binary page. |[Minor Color Code Styling](https://github.com/SanjayB06/flask_portfolio/commit/9e028d94f641cc194643189d54484231bdd47800)<br>[ASCII/UNICODE Conversion + Extra Task](https://github.com/SanjayB06/flask_portfolio/commit/ad7991fe9e1088f6a9995e6edaa623e55299c2d2)<br>[Left and Right shift](https://github.com/SanjayB06/flask_portfolio/commit/327fe868fa99714e7a1aa9660b505e48f862228b)|
 ||||
 |Matthew|Created color code page <br> Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6) <br> [Minor Styling on Color Code Page](https://github.com/SanjayB06/flask_portfolio/commit/355493ebcb848d31d34629f17c9edbeca6ee9524)|
 ||||
