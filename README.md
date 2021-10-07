@@ -71,6 +71,17 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Matthew|Fix navbar by updating the addresses <br> FIx visual error on Binary page|[Refix Navbar](https://github.com/SanjayB06/flask_portfolio/commit/40f198437bf912604beb8f6eaf4dd39b2c8fa577) <br> [Remove Selector](https://github.com/SanjayB06/flask_portfolio/commit/3d8ec4848c66893da364ac1e25f95aaf749eae84)|
 |Samuel|Takes notes for base <br> Fix the table in the Binary page <br> Put text on the image in RGB page|[Research for Bases](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.72bb4e2ex44l)<br> [Fix Binary Table](https://github.com/SanjayB06/flask_portfolio/commit/086eecad33526b6b9a8327b7e14e6c6bd1acb89c) <br> [Put Text on Image in RGB](https://github.com/SanjayB06/flask_portfolio/commit/7d41e76255f340b7591a48e2b58181ad209362cc)|
 
+##Week 7
+| Task | Description of Task | Link to Task|
+| - | - | - |
+
+| Names | Description of what User did | Link to Tangible|
+| - | - | - |
+||||
+||||
+|Matthew|Created color code page\ Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6)|
+||||
+
 ### Idea
 Starter code should be fun and practical.
 ### Visual thoughts
