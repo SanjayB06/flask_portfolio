@@ -3,46 +3,15 @@
 {% block background %}
 
     <style>
-        /*
-        Special styling to create lines inside of the diagram. Also has specific styling for the buttons and centering elements
-        */
-        .horizontalLine {
-            border: 0;
-            background-color: #000;
-            height: 3px;
-            transform: translateX(-3em);
-        }
-
-        .verticalLine {
-            margin-left: 1em;
-            width: 1px;
-            background: black;
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-        }
-
-        .buttonFalse {
-            background-color: black;
-            color: white;
-            font-style: normal;
-            width: 2em;
-        }
-
-        .buttonTrue {
-            background-color: white;
-            color: black;
-            font-style: italic;
-            width: 2em;
+        table, th, td {
+            border:1px solid black;
+            width:70%;
+            text-align:center;
         }
 
     </style>
 
 {% endblock %}
-
-
 
 {% block body %}
 
