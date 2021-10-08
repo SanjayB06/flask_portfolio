@@ -109,7 +109,9 @@ def rgb():
     path = Path(app.root_path) / "static" / "assets"
     return render_template('rgb.html', images=image_data(path))
 
-
+@app.route('/logicgates/')
+def logicgates():
+    return render_template("logicgates.html")
 @app.route('/ColorCodes/')
 def colorcodes():
     return render_template("ColorCodes.html")
