@@ -4,9 +4,26 @@
 
     <!DOCTYPE html>
 
-    <h1 class="text-center">Logic Gates</h1>
+    <html>
+    <style>
+        table, th, td {
+            border:4px solid black;
+            width:70%;
+            text-align:center;
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+         form {
+             margin-left:50px;
+             font-size:120%;
+         }
+    </style>
 
-    <h2>Inputs</h2>
+    <h1 class="text-center"><strong>Logic Gates</strong></h1>
+
+    <h2 style="margin-left:50px"><ins>Inputs</ins></h2>
 
     <form action="javascript:void(0);" onsubmit="updateResults()">
         <input type="checkbox" id="A" name="A" value="0">
@@ -16,54 +33,43 @@
         <input type="submit" value="submit">
     </form>
 
-    <html>
-    <style>
-        table, th, td {
-            border:1px solid black;
-            width:70%;
-            text-align:center;
-            margin-left:50px;
-        }
-    </style>
     <body>
-    <table>
-        <tr>
+    <table class="center">
+        <tr style="font-size:185%">
             <td>Symbol</td>
             <td>Logic Gate</td>
             <td>Result</td>
         </tr>
-        <tr style="height:75px">
+        <tr style="height:75px;font-size:135%">
             <td><img src="/static/assets/andgate.png" style="width:200px;height:50px" alt="And Gate"></td>
             <td>And Gate</td>
             <td><p id="and"/></td>
         </tr>
-        <tr style="height:75px">
+        <tr style="height:75px;font-size:135%">
             <td><img src="/static/assets/nandgate.png" style="width:200px;height:50px" alt="Nand Gate"></td>
             <td>Nand Gate</td>
             <td><p id="nand"/></td>
         </tr>
-        <tr style="height:75px">
+        <tr style="height:75px;font-size:135%">
             <td><img src="/static/assets/orgate.png" style="width:200px;height:50px" alt="Or Gate"></td>
             <td>Or Gate</td>
             <td><p id="or"/></td>
         </tr>
-        <tr style="height:75px">
+        <tr style="height:75px;font-size:135%">
             <td><img src="/static/assets/norgate.png" style="width:200px;height:50px" alt="Nor Gate"></td>
             <td>Nor Gate</td>
             <td><p id="nor"/></td>
         </tr>
-        <tr style="height:75px">
+        <tr style="height:75px;font-size:135%">
             <td><img src="/static/assets/xorgate.png" style="width:200px;height:50px" alt="Xor Gate"></td>
             <td>Xor Gate</td>
             <td><p id="xor"/></td>
         </tr>
     </table>
-
     </body>
     </html>
 
     <script>
-
         function updateResults() {
             let boolA = document.getElementById("A").checked;
             let boolB = document.getElementById("B").checked;
