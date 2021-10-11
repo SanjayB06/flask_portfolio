@@ -81,7 +81,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ||||
 |Matthew|Created color code page <br> Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6) <br> [Minor Styling on Color Code Page](https://github.com/SanjayB06/flask_portfolio/commit/355493ebcb848d31d34629f17c9edbeca6ee9524)|
 ||||
-|Samuel|Created logic gates page <br> |[Logic Gates](https://github.com/SanjayB06/flask_portfolio/commit/178f6c8b5aee092213cb604f1c632dd18304dbbc) |
+|Samuel|Created logic gates page <br> Logic gates styling|[Logic Gates](https://github.com/SanjayB06/flask_portfolio/commit/178f6c8b5aee092213cb604f1c632dd18304dbbc)<br> [Styling on Logic Gates Page](https://github.com/SanjayB06/flask_portfolio/commit/17ad57fe58330b904c424c18bd60affda3141c85)|
 ||||
 
 ### Idea
