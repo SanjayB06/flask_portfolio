@@ -18,6 +18,18 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Matthew|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
 |Samuel|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 
+## Week 7
+| Task | Description of Task | Link to Task|
+| - | - | - |
+
+| Names | Description of what User did | Link to Tangible|
+| - | - | - |
+|Sanjay|ASCII/Unicode Conversion <br> Changing ASCII to UNICODE based on binary value <br> Left and Right Shift (muliplication and division) on binary page. |[Minor Color Code Styling](https://github.com/SanjayB06/flask_portfolio/commit/9e028d94f641cc194643189d54484231bdd47800)<br>[ASCII/UNICODE Conversion + Extra Task](https://github.com/SanjayB06/flask_portfolio/commit/ad7991fe9e1088f6a9995e6edaa623e55299c2d2)<br>[Left and Right shift](https://github.com/SanjayB06/flask_portfolio/commit/327fe868fa99714e7a1aa9660b505e48f862228b)|
+|Gavin|Create new HTML file with 3 rows of 8 bits for addition|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/commit/c00c2462c4a66b2cea7fe43e3526bba3e5e3044d)|
+|Matthew|Created color code page <br> Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6) <br> [Minor Styling on Color Code Page](https://github.com/SanjayB06/flask_portfolio/commit/355493ebcb848d31d34629f17c9edbeca6ee9524)|
+|Samuel|Created logic gates page <br> Logic gates styling|[Logic Gates](https://github.com/SanjayB06/flask_portfolio/commit/178f6c8b5aee092213cb604f1c632dd18304dbbc)<br> [Styling on Logic Gates Page](https://github.com/SanjayB06/flask_portfolio/commit/17ad57fe58330b904c424c18bd60affda3141c85)|
+||||
+
 ## Week 6
 | Task | Description of Task | Link to Task|
 | - | - | - |
@@ -70,19 +82,6 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Gavin|Create tables for readme <br> Hard code bits to 16 <br> Add light bulbs <br> Remove the extra arrow on the dropdown on navbar|[Readme Table](https://github.com/SanjayB06/flask_portfolio/commit/76e35094670032efd53ac813c19f2702d0f78190) <br> [Set Hard Coded Bits to 16](https://github.com/SanjayB06/flask_portfolio/commit/390086fe89e57d2881c1f68544d2bdbefac409a7) <br> [Lightbulbs](https://github.com/SanjayB06/flask_portfolio/commit/aef138c9a1abdd09cb138c40067a7ad9c09be954) <br> [Fix Dropdown Issues](https://github.com/SanjayB06/flask_portfolio/commit/096d1b24503cae8da17ad2db7329baff5b5944f8)|
 |Matthew|Add about us dropdown <br> Change light bulb for binary page<br> Add table on binary page <br> Fix ASCII and style binary page <br> Fix input on binary page|[Navbar Dropdown](https://github.com/SanjayB06/flask_portfolio/commit/6ff62453e82d3af9746028265558e12999687502) <br> [Navbar Formatting](https://github.com/SanjayB06/flask_portfolio/commit/538b799aa5c9ee95a913765aac659ae6f8dfc08f) <br> [Current Lightbulbs](https://github.com/SanjayB06/flask_portfolio/commit/a6ab8ef4b39fa824b4b1ff38a87be18bdccbae3c) <br> [Binary Formatting/Add Table](https://github.com/SanjayB06/flask_portfolio/commit/e72dccc7726f4c70c421f0777c9c0bf8857b2b96) <br> [Edit Ascii Conversion & Style Binary Page](https://github.com/SanjayB06/flask_portfolio/commit/7694dbd6fe1105ee983e66df2e469b4ec6c5916c) <br> [Binary Input Fixed](https://github.com/SanjayB06/flask_portfolio/commit/686b0f1760073d13d47f7e5040c1087cf62c70ee)|
 |Samuel|Attempt to change light bulbs for binary page <br> Change background color for binary page|[Change Binary Picture](https://github.com/SanjayB06/flask_portfolio/commit/f0f85bdf32b36ce36d2f43a5f7e208c0c9b0894d) <br> [Change Binary Background](https://github.com/SanjayB06/flask_portfolio/commit/cc174a16a5d1649a3e1b57ebaa2d7acb90ac44ad)|
-
-## Week 7
-| Task | Description of Task | Link to Task|
-| - | - | - |
-
-| Names | Description of what User did | Link to Tangible|
-| - | - | - |
-|Sanjay|ASCII/Unicode Conversion. Changing ASCII to UNICODE based on binary value. Left and Right Shift (muliplication and division) on binary page. |[Minor Color Code Styling](https://github.com/SanjayB06/flask_portfolio/commit/9e028d94f641cc194643189d54484231bdd47800)<br>[ASCII/UNICODE Conversion + Extra Task](https://github.com/SanjayB06/flask_portfolio/commit/ad7991fe9e1088f6a9995e6edaa623e55299c2d2)<br>[Left and Right shift](https://github.com/SanjayB06/flask_portfolio/commit/327fe868fa99714e7a1aa9660b505e48f862228b)|
-||||
-|Matthew|Created color code page <br> Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6) <br> [Minor Styling on Color Code Page](https://github.com/SanjayB06/flask_portfolio/commit/355493ebcb848d31d34629f17c9edbeca6ee9524)|
-||||
-|Samuel|Created logic gates page <br> Logic gates styling|[Logic Gates](https://github.com/SanjayB06/flask_portfolio/commit/178f6c8b5aee092213cb604f1c632dd18304dbbc)<br> [Styling on Logic Gates Page](https://github.com/SanjayB06/flask_portfolio/commit/17ad57fe58330b904c424c18bd60affda3141c85)|
-||||
 
 ### Idea
 Starter code should be fun and practical.
