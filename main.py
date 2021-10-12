@@ -117,6 +117,9 @@ def logicgatess():
 def colorcodes():
     return render_template("ColorCodes.html")
 
+@app.route('/binary_addition/', methods=['GET', 'POST'])
+def binary_addition():
+    return render_template("binary_addition.html", BITS=8, imageOn="/static/assets/bulb_on.jpg", imageOff="/static/assets/bulb_off.jpg")
 
 if __name__ == "__main__":
     app.run(debug=True)
