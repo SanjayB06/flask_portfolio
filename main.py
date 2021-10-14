@@ -116,7 +116,7 @@ def logicgatess():
 @app.route('/ColorCodes/')
 def colorcodes():
     return render_template("ColorCodes.html")
-
+    
 @app.route('/binary_addition/', methods=['GET', 'POST'])
 def unsigned():
     return render_template("binary_addition.html", BITS=8, imageOn="/static/assets/bulb_on2.PNG", imageOff="/static/assets/bulb_off2.PNG")
