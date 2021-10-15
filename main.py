@@ -116,10 +116,17 @@ def logicgatess():
 @app.route('/ColorCodes/')
 def colorcodes():
     return render_template("ColorCodes.html")
-    
 @app.route('/binary_addition/', methods=['GET', 'POST'])
 def unsigned():
     return render_template("binary_addition.html", BITS=8, imageOn="/static/assets/bulb_on2.PNG", imageOff="/static/assets/bulb_off2.PNG")
+
+@app.route('/signed/', methods=['GET', 'POST'])
+def signed():
+    return render_template("signed.html", BITS=8, imageOn="/static/assets/bulb_on2.PNG", imageOff="/static/assets/bulb_off2.PNG")
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
 
 if __name__ == "__main__":
     app.run(debug=True)

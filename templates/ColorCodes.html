@@ -1,6 +1,6 @@
 
 <!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+{% include "ournav.html" %}
 
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
@@ -12,60 +12,60 @@
     {% set imgBulbOff = "/static/assets/bulb_off2.png" %}
     {% set msgTurnOn = "Turn On" %}
     {% set msgTurnOff = "Turn Off" %}
-<script>
-    const BITS = 24; let max = 47; let MAX = parseInt(max, 10);
-    function getBits() {
-        let bits = "";
-        for(let i = 0; i < BITS; i++) {
-            bits = bits + document.getElementById('digit' + i).value;
+    <script>
+        const BITS = 24; let max = 47; let MAX = parseInt(max, 10);
+        function getBits() {
+            let bits = "";
+            for(let i = 0; i < BITS; i++) {
+                bits = bits + document.getElementById('digit' + i).value;
+            }
+            return bits;
         }
-        return bits;
-    }
 
-    function change_color(r,g,b) {
-        document.getElementById("color_code").style.backgroundColor = "rgb(35,34,23)"
-    }
-    function toggleBit(i) {
-        //alert("Digit action: " + i );
-        const dig = document.getElementById('digit' + i);
-        const image = document.getElementById('bulb' + i);
-        const butt = document.getElementById('butt' + i);
-        // Change digit and visual
-        if (image.src.match("{{ imgBulbOn }}")) {
-            dig.value = 0;
-            image.src = "{{ imgBulbOff }}";
-            butt.innerHTML = "{{ msgTurnOn }}";
-        } else {
-            dig.value = 1;
-            image.src = "{{ imgBulbOn }}";
-            butt.innerHTML = "{{ msgTurnOff }}";
+        function change_color(r,g,b) {
+            document.getElementById("color_code").style.backgroundColor = "rgb(35,34,23)"
         }
-        // Binary numbers
-        const binary = getBits();
-        setConversions(binary);
-    }
-    function setConversions(binary) {
-        document.getElementById('color_code').style.backgroundColor = "#"+String(parseInt(binary, 2).toString(16));
-        document.getElementById('hex').innerHTML = "Hex Code: #" + String(parseInt(binary, 2).toString(16));
-     }
+        function toggleBit(i) {
+            //alert("Digit action: " + i );
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
+            // Change digit and visual
+            if (image.src.match("{{ imgBulbOn }}")) {
+                dig.value = 0;
+                image.src = "{{ imgBulbOff }}";
+                butt.innerHTML = "{{ msgTurnOn }}";
+            } else {
+                dig.value = 1;
+                image.src = "{{ imgBulbOn }}";
+                butt.innerHTML = "{{ msgTurnOff }}";
+            }
+            // Binary numbers
+            const binary = getBits();
+            setConversions(binary);
+        }
+        function setConversions(binary) {
+            document.getElementById('color_code').style.backgroundColor = "#"+String(parseInt(binary, 2).toString(16));
+            document.getElementById('hex').innerHTML = "Hex Code: #" + String(parseInt(binary, 2).toString(16));
+        }
 
-</script>
+    </script>
     <style>
-    #color_code {
-        background-color: transparent;
-        width: 80%;
-        height: 100px;
-        margin: 0 auto;
-    }
-     h1 {
-         text-align: center;
-     }
-    table, th, td {
-        border: 1px solid black;
-    }
-    table {
-        margin: 15px auto;
-    }
+        #color_code {
+            background-color: transparent;
+            width: 80%;
+            height: 100px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            margin: 15px auto;
+        }
     </style>
     <div class="col-12">
         <table class="table">
@@ -84,7 +84,7 @@
         </table>
     </div>
     <div id="color_code">
-    <p>Color Displays Here</p>
+        <p>Color Displays Here</p>
     </div>
     <p id="hex">Hex Code Displays Here</p>
     </table>
