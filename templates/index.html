@@ -1,7 +1,62 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-<!--{% extends "layouts/base.html" %}
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family:Courier;
+        }
 
- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Team Gaico" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/SanjayB06/flask_portfolio" %}
+        h1 {
+            margin-top: 30px;
+            text-align: center;
+            font-family: 'Notable', sans-serif;
+            font-size: 50px;
+            color: #9932CC;
+            /*margin-bottom: 500px;*/
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .butcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .mainbut {
+            margin-botton: 10px;
+            color: #9932CC;
+            text-decoration: none;
+            border: 2px solid pink;
+            padding: 1.5em 2em;
+            font-size: 30px;
+            border-radius: 50%;
+            transition: background-color .4s;
+            box-shadow: 5px 10px 8px pink/*#2b2a2a*/;
+        }
+        .mainbut:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Team Gaico Trivia</h1>
+    <img src="../static/assets/cool.gif" alt="cool brain">
+    <div class="butcontainer">
+        <a href="/Instructions/" class="mainbut">Instructions</a>
+        <a href="/Start/" class="mainbut">Start</a>
+        <a href="https://github.com/SanjayB06/flask_portfolio" class="mainbut" target="_blank">Repository</a>
+    </div>
+</body>
+</html>
