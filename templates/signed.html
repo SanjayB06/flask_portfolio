@@ -37,7 +37,6 @@
 
         .parallax {
             /* The image used */
-            background-image: url({{ imageurl }}); background-color: #f2cac4;
 
             /* Full height */
             height: 100%;
@@ -57,10 +56,8 @@
         .square {
             height: 100px;
             width: 300px;
-            background-color: blue;
             margin: 1%;
             border: 1px;
-            border-color: white;
         }
     </style>
 
@@ -269,9 +266,9 @@
     </script>
 
     <div class="parallax" style="height: max-content">
-        <div class="frame" style="background-color: blue; padding: 5%; width: 100%; margin: auto; height: max-content">
+        <div class="frame" style=" padding: 5%; width: 100%; margin: auto; height: max-content">
             <div>
-                <div class="d-flex justify-content-center" style="background-color: blue">
+                <div class="d-flex justify-content-center">
 
                 </div>
             </div>
@@ -281,12 +278,12 @@
             <div class="table">
                 <tr>
                     <td>
-                        <div class="row justify-content-md-center" style="background-color: blue">
+                        <div class="row justify-content-md-center" >
 
 
                             <div class="col-10" style="display: none">
                                 <table class="table">
-                                    <tr id="table" style="color: white">
+                                    <tr id="table">
                                         <th>Shift Left</th>
                                         <th>Plus</th>
                                         <th>Binary</th>
@@ -298,7 +295,7 @@
                                         <th>Minus</th>
                                         <th>Shift Right</th>
                                     </tr>
-                                    <tr style="color: white">
+                                    <tr>
                                         <td><button type="button" id="multiply2" onclick="multiply(1)">*2</button></td>
                                         <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                                         <td id="binary">0</td>
@@ -313,7 +310,7 @@
                                 </table>
                             </div>
 
-                            <div class="col-12" style="background-color: white">
+                            <div class="col-12" ">
                                 <div class="container-fluid" >
                                     <div class="row">
                                         <div class="col-sm">
@@ -340,7 +337,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12" style="background-color: white">
+                            <div class="col-12">
                                 <div class="container-fluid" >
                                     <div class="row">
                                         <div class="col-sm">
@@ -376,14 +373,14 @@
                                 </div>
                             </div>
 
-                            <div class="col-12" style="background-color: blue">
+                            <div class="col-12">
                                 <div class="container-fluid" >
                                     <div class="row">
                                         <div class="col-sm">
                                             <!-- On/off toggles for bulbs-->
                                             <table class="table">
                                                 <tr>
-                                                    <td style="background-color: black; color: white">
+                                                    <td>
                                                         <div id="operator" style="visibility: hidden">0</div>
                                                         <div id="decimalR3">Dec: 0</div>
                                                     </td>
@@ -395,7 +392,7 @@
                                                     {% endfor %}
                                                 </tr>
                                                 <tr>
-                                                    <td style="background-color: black; color: white" id="outputR3">Bin: 000000000</td>
+                                                    <td  id="outputR3">Bin: 000000000</td>
                                                     {% for i in range(16, 25) %}
                                                         <td style="display: none"><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                                                     {% endfor %}

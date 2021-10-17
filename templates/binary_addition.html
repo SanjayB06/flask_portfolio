@@ -211,7 +211,7 @@
             </div>
 
             <div>
-                <button type="button" id="button" onclick="addBits()" style="background-color: pink; color: white; font-weight: bold; font-size: 25px; padding-right: 550px; padding-left: 517px">+</button>
+                <button type="button" id="button" onclick="addBits()" style="border: 2px solid pink">+</button>
             </div>
 
             <table class="table">
@@ -226,7 +226,7 @@
             </table>
             <table class="table">
                 <tr>
-                    <div style="color: black; text-align: center; font-size: 100px" <p> = </p> </div>
+                    <div style="color: #9932CC; text-align: center; font-size: 100px" <p> = </p> </div>
         </tr>
         <tr>
             {% for i in range(BITS) %} {# we just want 8 bits per row #}
@@ -244,5 +244,20 @@
             background-color: #66fcb9;
         }
 
+        #button {
+            border-radius: 12px;
+            background-color: transparent;
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+            padding-right: 550px;
+            padding-left: 517px;
+            transition: background-color 0.4s, color 0.4s;
+            cursor: pointer;
+        }
+        #button:hover {
+            background-color: pink;
+            color:white;
+        }
     </style>
 {% endblock %}
