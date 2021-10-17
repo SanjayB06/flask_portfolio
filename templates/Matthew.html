@@ -8,18 +8,29 @@
 {% block body %}
     <style>
     .paragraph {
+        color: white;
         width: 15%;
-        border: 2px yellow solid;
+        border: 2px white solid;
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.3) ;
     .
+    }
+    .Hello {
+        color: black;
+        width: 30%;
+        border: 2px white solid;
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.5) ;
+    }
+    .col-12{
+        color: black;
     }
     </style>
     <!- Try building a new body here ->
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
-    <div class="col-12">
-        <p>Hello, {{name}}!</p>
-    </div>
+
 
     <div class="col-12">
         <form action="/greet_Matthew" id="greet" method="POST" >
@@ -29,11 +40,12 @@
         </form>
     </div>
 
-    <div class="col-12">
-        <img src="/static/assets/PythonFlask.jpeg" style="height: 50px" >
+    <div class="Hello">
+        <p>Hello, my name is Matthew and I am one of the four clowns who worked on this web page. Nice to meet you {{name}}! </p>
     </div>
-
-    <div class="paragraph"><p>I am Matthew. I have a pet rock. </p> </div>
+    <br>
+    <div class="paragraph">
+        <p>This is my pet rock. His name is Billy. </p> </div>
 
 
     <img src="/static/assets/clear%20rock.png" alt="no">
