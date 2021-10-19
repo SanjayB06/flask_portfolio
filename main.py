@@ -1,7 +1,8 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data
-
+import requests
+import json
 # create a Flask instance
 app = Flask(__name__)
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
@@ -131,5 +132,19 @@ def page_not_found(e):
 @app.route('/topics/')
 def topics():
     return render_template("topics.html")
+
+@app.route('/study/',methods=['GET','POST'])
+def study():
+    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+    headers = {
+        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+    }
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
+    return render_template('study.html', question=output)
+
+topics = []
 if __name__ == "__main__":
     app.run(debug=True)
+
