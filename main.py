@@ -130,6 +130,16 @@ def page_not_found(e):
 
 @app.route('/topics/')
 def topics():
-    return render_template("topics.html")
+    topic = [
+        {"topic": "Animal Trivia","Description":"Can you guess the animals?","image1":"/static/assets/silhouette-animal-clipart-11.jpg"},
+        {"topic": "Movie Trivia","Description":"Match famous movie quotes with your favorite movies","image1":"/static/assets/Movie.png"},
+        {"topic": "Geography Trivia","Description":"Test your geography knowledge with this trivia","image1":"../static/assets/Globe.JPG"},
+        {"topic": "America Trivia","Description":"Test what you know about America, including historical events and laws","image1":"/static/assets/AmericanFlag.jfif"},
+        {"topic": "Planet Trivia","Description":"What do you know about the planets in our solar system?","image1":"../static/assets/SaturnSilhoutte.png"},
+        {"topic": "Food Trivia","Description":"See if you know where these popular food items originated from","image1":"/static/assets/Fastfood.JPG"}
+    ]
+    return render_template("topics.html", topics=topic)
 if __name__ == "__main__":
     app.run(debug=True)
+
+

@@ -48,14 +48,14 @@
 </head>
 <body>
 <div class="maincontainer">
-    {% for i in range(8) %}
+    {% for x in topics %}
         <div class="topicContainer">
-            <div class="img">
-                <img src="../static/assets/brain_16x9.webp" alt="brain picture">
-            </div>
+        <div class="img">
+            <img src="{{x.image1}}" alt="brain picture">
+        </div>
             <div class="text">
-                <h3>Topic #{{ i +1 }}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut ipsa nam placeat veniam! Iste, iusto, nobis? Beatae explicabo iure labore magni necessitatibus, praesentium. Aliquam autem beatae dignissimos dolorem doloremque ea eligendi excepturi ipsam ipsum labore modi mollitia, necessitatibus neque nesciunt nisi nobis non obcaecati pariatur perspiciatis quas qui quibusdam quos reiciendis repellat unde vel voluptatum. Autem dolorum eos expedita, illum magni maiores porro totam! A ab adipisci commodi debitis dolor doloremque, doloribus eligendi eos eveniet expedita explicabo hic incidunt magnam nobis non officia optio provident quae quibusdam repudiandae, sed similique tenetur totam velit voluptate? A cum dolor placeat provident!</p>
+                <h3>{{ x['topic'] }}</h3>
+                <p>{{ x['Description'] }}</p>
                 <a href="/start/">Play Topic</a>
             </div>
         </div>
