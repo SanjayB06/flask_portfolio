@@ -1,0 +1,51 @@
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study</title>
+    <style>
+        .maincontainer {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .questioncontainer{
+            background-color: #C4C4C4;
+            width: 80%;
+            margin: 0 auto;
+            padding: 5em
+        }
+        .refresh {
+            padding: 1.5em 2em;
+            background-color: transparent;
+            border: 2px solid pink;
+            transition: background-color .5s;
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+
+        }
+        a {
+            text-decoration: none;
+        }
+        .refresh:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="maincontainer">
+    {% for topic in question %}
+        <div class="questioncontainer">
+            <h3>{{ topic['question']}}?</h3>
+            <p>{{ topic['answer'] }}</p>
+        </div>
+    {% endfor %}
+    <div class="refresh"><a href="/study/">New Fact</a></div>
+</div>
+</body>
+</html>
