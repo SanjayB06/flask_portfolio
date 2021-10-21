@@ -14,27 +14,72 @@
             if (userAns==answer) {
                 document.getElementById("results").innerText="THE ANSWER IS CORRECT"
             } else {
-                document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is "+answer + ". you answered " + userAns)
+                document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is \""+answer + "\". you answered \"" + userAns+"\"")
             }
 
         }
     </script>
+    <style>
+        .quiz {
+            margin: 0 auto;
+            text-align: center;
+            width: 60%;
+            padding: 3em;
+        }
+        input {
+            width: 100%;
+            padding: 1em;
+            box-sizing: border-box;
+            outline: none;
+            border: none ;
+            border-radius: 10px;
+        }
+        input:focus {
+            background-color: #fd9bca;
+            outline: none;
+            border: none;
+        }
+        .quiz h3,.quiz input,.quiz button,.quiz p {
+            margin-bottom: 25px;
+        }
+        button {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+        .but {
+            font-size: 14px;
+            padding: 1em;
+            border: 2px solid pink;
+            border-radius: 20px;
+            background-color: transparent;
+            transition: background-color .5s;
+        }
+        .but:hover {
+            background-color: pink;
+        }
+
+
+    </style>
 </head>
 <body>
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
-<h3>{{ question[0]['question']}}</h3>
-<input type="text" id="userans" placeholder="answer goes here">
-<br>
-<button onclick="checkAns()">submit</button>
-<!--<form action="/quiz/" method="post">
-    <label>Answer: </label>
-    <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
-
+<div class="quiz">
+    <h3>{{ question[0]['question']}}</h3>
+    <input type="text" id="userans" placeholder="answer goes here">
     <br>
-    <button id="test" onclick="checkAns()">submit</button>
-</form>-->
-<p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
-<p id="results"></p>
-<a id="but" href="/quiz/">Next Question</a>
+    <button class="but" onclick="checkAns()">SUBMIT</button>
+    <!--<form action="/quiz/" method="post">
+        <label>Answer: </label>
+        <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
+
+        <br>
+        <button id="test" onclick="checkAns()">submit</button>
+    </form>-->
+    <p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
+    <p id="results"></p>
+    <a class="but" href="/quiz/">Next Question &#10148;</a>
+</div>
 </body>
 </html>
