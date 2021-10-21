@@ -143,7 +143,17 @@ def study():
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
     return render_template('study.html', question=output)
+@app.route('/quiz/',methods=['GET','POST'])
+def quiz():
+    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+    headers = {
+        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+    }
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
 
+    return render_template("quiz.html", question=output)
 topics = []
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,40 @@
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study</title>
+    <script>
+        function checkAns() {
+            let answer = document.getElementById("ans").innerText;
+            let userAns = document.getElementById("userans").value
+            if (userAns==answer) {
+                document.getElementById("results").innerText="THE ANSWER IS CORRECT"
+            } else {
+                document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is "+answer + ". you answered " + userAns)
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1 style="text-align: center">TRIVIA QUIZ</h1>
+<h3>{{ question[0]['question']}}</h3>
+<input type="text" id="userans" placeholder="answer goes here">
+<br>
+<button onclick="checkAns()">submit</button>
+<!--<form action="/quiz/" method="post">
+    <label>Answer: </label>
+    <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
+
+    <br>
+    <button id="test" onclick="checkAns()">submit</button>
+</form>-->
+<p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
+<p id="results"></p>
+<a id="but" href="/quiz/">Next Question</a>
+</body>
+</html>
