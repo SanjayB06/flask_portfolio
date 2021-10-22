@@ -35,7 +35,7 @@
             border-radius: 10px;
         }
         input:focus {
-            background-color: #fd9bca;
+            background-color: #ffffff;
             outline: none;
             border: none;
         }
@@ -47,17 +47,19 @@
         }
         a {
             text-decoration: none;
+            color: #000000;
         }
         .but {
             font-size: 14px;
             padding: 1em;
-            border: 2px solid pink;
+            border: 2px solid #0e387a;
             border-radius: 20px;
             background-color: transparent;
             transition: background-color .5s;
         }
         .but:hover {
-            background-color: pink;
+            background-color: #0e387a;
+            color: #ffffff;
         }
 
 
@@ -67,7 +69,7 @@
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
 <h1>the mode is {{ mode }}</h1>
 <div class="quiz" style="display: none">
-    <h3>{{ question[0]['question']}}</h3>
+    <h3 style="color: black">{{ question[0]['question']}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
     <button class="but" onclick="checkAns()">SUBMIT</button>

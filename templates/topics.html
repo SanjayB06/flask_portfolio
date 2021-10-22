@@ -40,12 +40,14 @@
         .topicContainer a {
             text-decoration: none;
             padding: .5em 1em;
-            border: 1px solid pink;
+            border: 1px solid #0e387a;
             transition: background-color .4s;
+            color: #0e387a;
         }
 
         .topicContainer a:hover {
-            background-color: pink;
+            background-color: #0e387a;
+            color: white;
         }
     </style>
 </head>
@@ -57,7 +59,7 @@
             <img src="{{x.image1}}" alt="brain picture">
         </div>
             <div class="text">
-                <h3>{{ x['topic'] }}</h3>
+                <h3 style="color: black">{{ x['topic'] }}</h3>
                 <p>{{ x['Description'] }}</p>
                 <a href="/start/">Play Topic</a>
             </div>

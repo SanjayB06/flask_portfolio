@@ -151,6 +151,11 @@ def study():
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
     return render_template('study.html', question=output)
+
+@app.route('/instructions/')
+def instructions():
+    return render_template("instructions.html")
+
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
     url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
@@ -160,9 +165,7 @@ def quiz():
     }
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
-
     return render_template("quiz.html", question=output)
 topics = []
 if __name__ == "__main__":
     app.run(debug=True)
-
