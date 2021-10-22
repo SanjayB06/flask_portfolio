@@ -8,15 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        img {
+        .maincontainer img {
             width: 200px;
             grid-area: image;
-            align-items: center;
+            align-self: center;
         }
 
         .maincontainer {
             width: 80%;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
         }
 
         .topicContainer {
