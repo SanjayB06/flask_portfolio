@@ -7,22 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Study</title>
-    <script>
-        function showAns() {
-            if (document.getElementById('answer').style.display == 'none') {
-                document.getElementById('answer').style.display = 'block'
-                document.getElementById('toggler').innerText='Hide Answer'
-            }
-            else {
-                document.getElementById('answer').style.display = 'none'
-                document.getElementById('toggler').innerText = 'Show Answer'
-            }
-        }
-    </script>
     <style>
-        body {
-            text-align: center;
-        }
         .maincontainer {
             width: 80%;
             margin: 0 auto;
@@ -32,36 +17,38 @@
             background-color: #C4C4C4;
             width: 80%;
             margin: 0 auto;
-            padding: 5em;
+            padding: 5em
+        }
+        .refresh {
+            padding: 1.5em 2em;
+            background-color: transparent;
+            border: 2px solid pink;
+            transition: background-color .5s;
+            margin: 0 auto;
+            width: 80%;
             text-align: center;
+
         }
         a {
             text-decoration: none;
         }
-        .button {
-            border: 2px solid #fc78b7;
-            border-radius: 40px;
-            background-color: transparent;
-            padding: 1em 1.5em;
-            transition: background-color .5s;
+        .refresh:hover {
+            background-color: pink;
         }
-        .button:hover {
-            background-color: #fc78b7;
+        nav {
+            text-align: left;
         }
     </style>
 </head>
 <body>
-<h1 style="margin-top:25px; font-size: 50px ">Learn Trivia</h1>
 <div class="maincontainer">
     {% for topic in question %}
         <div class="questioncontainer">
-            <h3 style="margin-bottom: 25px;font-size: 30px">{{ topic['question']}}?</h3>
-            <button class="button" id="toggler" onclick="showAns()" style="margin-bottom: 25px">Show Answer</button>
-            <p id="answer" style="display:none;font-size: 20px;">{{ topic['answer'] }}</p>
+            <h3>{{ topic['question']}}?</h3>
+            <p>{{ topic['answer'] }}</p>
         </div>
     {% endfor %}
+    <div class="refresh"><a href="/study/">New Fact</a></div>
 </div>
-<a class = "button" href="/study/">New Fact</a>
-
 </body>
 </html>
