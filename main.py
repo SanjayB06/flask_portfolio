@@ -152,8 +152,18 @@ def quiz():
     }
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
+    mode=request.args.get('mode')
+    topic=request.args.get('topic')
 
-    return render_template("quiz.html", question=output)
+    return render_template("quiz.html", question=output,mode=mode)
+@app.route('/test/')
+def test():
+    source = request.args.get('source')
+    return render_template("test.html", source = source)
+
+@app.route('/start/')
+def start():
+    return render_template("start.html")
 topics = []
 if __name__ == "__main__":
     app.run(debug=True)

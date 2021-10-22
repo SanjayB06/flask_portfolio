@@ -11,7 +11,7 @@
         function checkAns() {
             let answer = document.getElementById("ans").innerText;
             let userAns = document.getElementById("userans").value
-            if (userAns==answer) {
+            if (userAns.toLowerCase()==answer.toLowerCase()) {
                 document.getElementById("results").innerText="THE ANSWER IS CORRECT"
             } else {
                 document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is \""+answer + "\". you answered \"" + userAns+"\"")
@@ -65,7 +65,8 @@
 </head>
 <body>
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
-<div class="quiz">
+<h1>the mode is {{ mode }}</h1>
+<div class="quiz" style="display: none">
     <h3>{{ question[0]['question']}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
