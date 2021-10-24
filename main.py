@@ -114,6 +114,10 @@ def rgb():
 def logicgatess():
     return render_template("logicgatess.html")
 
+@app.route('/Wireframes/')
+def Wireframes():
+    return render_template("Wireframes.html")
+
 @app.route('/ColorCodes/')
 def colorcodes():
     return render_template("ColorCodes.html")
@@ -166,6 +170,21 @@ def quiz():
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
     return render_template("quiz.html", question=output)
+
+@app.route('/historyquiz/')
+def historyquiz():
+    url = "https://numbersapi.p.rapidapi.com/6/21/date"
+
+    querystring = {"fragment":"true","json":"true"}
+
+    headers = {
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    output = json.loads(response.text)
+    return render_template("historyquiz.html",questions=output)
 topics = []
 if __name__ == "__main__":
     app.run(debug=True)

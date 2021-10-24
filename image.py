@@ -48,6 +48,8 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
             d1.text((0, 0), "Hi!")
         img_reference.save(file)
 
+
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
