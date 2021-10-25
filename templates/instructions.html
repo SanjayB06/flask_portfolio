@@ -13,32 +13,55 @@
 </body>
 </html>
 
-
-
-
-<div class="biegbox">
+<br>
+<div class="bigbox">
 
     <div class="boxy">
-        <h2>Instructions</h2>
-        <p> At the the top of the screen is a navigation bar where you will be able to <i>navigate</i> the website.
-            In the navigation bar you can simply hover over the drop down menus in order to expand the list. Once you find a link
-            that interests you you can click on it to navigate to that page. There is a button named <i>Study</i> second from the left on
-            the navigation bar which will lead you to a page that displays random trivia question and answers. The <i>Topics List</i>
-            button two buttons over to the left from the Study button displays six different quiz topics that you can choose to do.</p>
+        <h2 style="color: white;">Instructions</h2>
+        <p style="color: white;"> At the the top of the screen is a navigation bar where you will be able to <i>navigate</i> the website.
+            In the navigation bar you can simply hover over the drop down menus in order to expand the list. Once
+            you find a link that interests you you can click on it to navigate to that page. The <i>Study</i> button
+            in the navigation bar leads you to a page that displays random trivia question and answers for practice.
+            The <i>Modes</i> button on the navigation bar leads you to a page displaying six different quiz topics
+            that you can choose to do and two types of quiz choices. The<i>Play Quiz</i> button on the navigation bar
+            leads you to a the Trivia Quiz, before starting you will have two different test options to choose from.</p>
     </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="buttons">
-        <p>buttons go here</p>
+        <a href="/quiz/" class="button">Play</a>
+        <a href="/home/" class="button">Home</a>
     </div>
 
 </div>
 <style>
     .boxy {
         border: 5px white dashed;
-        width: 30%;
-        background-color: rgb(253, 155, 202);
+        width: 99%;
+        background-color: #0e387a;
         align-items: center;
     }
+
     .buttons {
-        border:
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .button {
+        margin-bottom: 10px;
+        color: #000000;
+        text-decoration: none;
+        border: 2px #0e387a;
+        padding: 1.5em 2em;
+        font-size: 30px;
+        border-radius: 50%;
+        transition: background-color .4s;
+        box-shadow: 5px 10px 8px #0e387a/*#2b2a2a*/;
+    }
+
+    .button:hover {
+        background-color: #0e387a;
     }
 </style>
