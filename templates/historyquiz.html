@@ -1,0 +1,81 @@
+{% include "ournav.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>historyquiz</title>
+    <style>
+
+        .button {
+            display:block;
+            margin:0 auto;
+            position:relative;
+            font-style:normal;
+            font-weight:normal;
+            font-family:"Open Sans";
+            font-size:20px;
+            outline:none;
+            color: #000000;
+            border:3px solid black;
+            text-decoration:none;
+            text-align:center;
+            cursor:pointer;
+            -webkit-border-radius:2px;
+            -moz-border-radius:2px;
+            border-radius:60px;
+            background-color:#fc78b7;
+            padding: 1em 3.5em;
+            margin-top:100px;
+        }
+        .button:hover {
+            background-color: rgb(255, 142, 194)
+        }
+    </style>
+</head>
+<body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<h1 style="padding-top:50px">History Trivia</h1>
+<p style="text-align:center;font-size:150%;padding-top:60px">{{ questions["text"] }}</p>
+<button onclick="myFunction()" class="button">Get Answer!</button>
+<div id="myDIV" style="display:none">
+    <p style="text-align:center; margin-top:40px;font-size:200%;">The correct year is {{ questions['year'] }}</p>
+</div>
+<button onClick="history.go(0);" style="text-align:center;margin-top:30px; display:block; margin:0 auto; position:relative;font-style:normal;font-weight:normal;font-family:Open Sans; font-size:12px;outline:none;color: #000000;border:3px solid black;text-decoration:none;text-align:center;cursor:pointer;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:60px;background-color:#fc78b7;padding: 1em 3.5em;margin-top:100px;" class="refreshButton">Next Question</button>
+
+<p style="margin-top:30px;font-size:130%;text-align:center">Did you answer correctly?:</p>
+<div style="text-align:center">
+    <input type="checkbox" id="yes" name="howCorrect" value="no">
+    <label for="yes">yes</label>
+</div>
+<div style="text-align:center">
+    <input type="checkbox" id="no" name="howCorrect" value="no">
+    <label for="no">no</label>
+</div>
+<div style="text-align:center">
+    <button id="submit">Submit</button>
+</div>
+<br>
+
+<script>
+    document.getElementById('submit').onclick = function() {
+        if (document.getElementById('yes').checked) {
+            alert("Good Job!");
+        } else if (document.getElementById('no').checked) {
+            alert("Better luck next time");
+        }
+    }
+</script>
+</body>
+</html>

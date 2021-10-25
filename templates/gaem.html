@@ -1,0 +1,63 @@
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+</head>
+<Body>
+
+
+<script>
+    function check() {
+        let x = Math.floor((Math.random() * 10) + 1);
+        document.getElementById("ai").innerHTML = x;
+        let ai = document.getElementById("ai");
+        let response = document.getElementById("response").value;
+        if (ai == parseInt(response)){
+            document.getElementById("output").innerText="You Win :) ";}
+        else  {document.getElementById("results").innerText="You did not win :("};
+    }
+</script>
+<style>
+    button{
+        background-color: #0e387a;
+        color: #ffffff;
+        border-radius: 10px;
+        height: 45px;
+        width: 130px;
+
+    }
+
+</style>
+
+<br>
+<input style="width: 50%;
+            padding: 1em;
+            box-sizing: border-box;
+            outline: none;
+            border:  2px #0e387a solid; ;
+            border-radius: 10px;"
+            type="number" id="response" placeholder="pick a number 1-10">
+
+<button class="button" onclick="check()">Submit</button>
+
+
+<div class="card" style=
+        "color: #ffffff;
+         width: 10%;
+         height: 50px;
+         border-radius: 10px;
+         text-align: center;
+         font-weight: 600;
+         background-color: #0e387a ;">
+<p id="results">[Result Here]</p>
+<p id="ai">[AI Answer Here]</p>
+</div>
+
+
+
+</Body>
