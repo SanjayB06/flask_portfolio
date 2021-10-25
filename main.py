@@ -156,6 +156,10 @@ def study():
     output = json.loads(response.text)
     return render_template('study.html', question=output)
 
+@app.route('/gaem/')
+def gaem():
+    return render_template("gaem.html")
+
 @app.route('/instructions/')
 def instructions():
     return render_template("instructions.html")
