@@ -45,7 +45,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 | Names | Description of what User did | Link to Tangible|
 | - | - | - |
 |Sanjay|Redesign whole navbar and restyle binary.html|[Hover Navbar](https://github.com/SanjayB06/flask_portfolio/commit/0d870ae0ece20e16090db08c2a5d8beefaa24e60)|
-|Gavin|Complete unsigned addition from last week <br> Redesign Unsigned Addition page|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/commit/5bdacc212c7df64b5f49892be66574ba6932b5b7) <br> [Unsigned Addition Design] (https://github.com/SanjayB06/flask_portfolio/commit/55b108dfb7c833aacf90412bc5541434522fb3a0)|
+|Gavin|Complete unsigned addition from last week <br> Redesign Unsigned Addition page|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/commit/5bdacc212c7df64b5f49892be66574ba6932b5b7) <br> [Unsigned Addition Design](https://github.com/SanjayB06/flask_portfolio/commit/55b108dfb7c833aacf90412bc5541434522fb3a0)|
 |Matthew|Add second dropdown in navbar called Minilabs containing Binarylabs, Conceptuals, and Wireframing Activity|[More Navbar Menus](https://github.com/SanjayB06/flask_portfolio/commit/abd1b9976fad0837b039ce4b0c96895baa2e0710)|
 |Samuel|Change color scheme of binary.html and navbar|[Restyling](https://github.com/SanjayB06/flask_portfolio/commit/d497dc4f690a428dc88110af27e36001b166b343)|
 
