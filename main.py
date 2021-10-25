@@ -129,8 +129,8 @@ def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
-@app.route('/topics/')
-def topics():
+@app.route('/modes/')
+def start():
     topic = [
         {"topic": "Animal Trivia","Description":"Can you guess the animals?","image1":"/static/assets/silhouette-animal-clipart-11.jpg"},
         {"topic": "Movie Trivia","Description":"Match famous movie quotes with your favorite movies","image1":"/static/assets/Movie.png"},
@@ -139,7 +139,11 @@ def topics():
         {"topic": "Planet Trivia","Description":"What do you know about the planets in our solar system?","image1":"../static/assets/SaturnSilhoutte.png"},
         {"topic": "Food Trivia","Description":"See if you know where these popular food items originated from","image1":"/static/assets/Fastfood.JPG"}
     ]
-    return render_template("topics.html", topics=topic)
+    modes = [
+        {'name':'Single Question','param':'Single-Q','Description':"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at metus sed est imperdiet suscipit. Nam semper nulla vitae diam rhoncus feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus euismod orci dictum congue. Nulla eget lectus faucibus, feugiat leo vel, dapibus arcu. "},
+        {'name':'Test','param':'test','Description':"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at metus sed est imperdiet suscipit. Nam semper nulla vitae diam rhoncus feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus euismod orci dictum congue. Nulla eget lectus faucibus, feugiat leo vel, dapibus arcu. "}
+    ]
+    return render_template("modes.html", topics=topic,modes=modes)
 
 @app.route('/study/',methods=['GET','POST'])
 def study():
@@ -165,7 +169,7 @@ def quiz():
     }
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
-    return render_template("quiz.html", question=output)
+    return render_template("quiz.html", question=output,topic='animals')
 topics = []
 if __name__ == "__main__":
     app.run(debug=True)

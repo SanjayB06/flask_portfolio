@@ -37,21 +37,27 @@
         p {
             margin-bottom: 10px;
         }
-        .topicContainer a {
+        .topicContainer a, .but {
             text-decoration: none;
             padding: .5em 1em;
             border: 1px solid #0e387a;
             transition: background-color .4s;
             color: #0e387a;
         }
+        .butcont {
+            text-align: center;
+            margin-top: 15px;
+        }
 
-        .topicContainer a:hover {
+        .topicContainer a:hover, .but:hover {
             background-color: #0e387a;
             color: white;
         }
     </style>
 </head>
 <body>
+<h1>Start the Quiz</h1>
+<div class="butcont"><a class="but" href="/quiz/">Play Now</a></div>
 <div class="maincontainer">
     {% for x in topics %}
         <div class="topicContainer">
@@ -65,6 +71,15 @@
             </div>
         </div>
     {% endfor  %}
+    {% for x in modes %}
+        <div class="topicContainer">
+            <div class="right">
+                <h3 style="color:black;margin-bottom: 10px">{{ x['name'] }}</h3>
+                <a href="/quiz?mode={{ x['param'] }}">Play {{ x['name'] }}</a>
+            </div>
+            <p>{{ x['Description'] }}</p>
+        </div>
+    {% endfor %}
 </div>
 
 </body>

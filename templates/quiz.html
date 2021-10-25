@@ -8,6 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Study</title>
     <script>
+        function mode() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString)
+            if (urlParams.get('mode') == "Single-Q" ) {
+                document.getElementById("quizS").style.display="block"
+                document.getElementById("selector").style.display = "none"
+            } else if (urlParams.get('mode')=='test') {
+                document.getElementById("quizT").style.display = "block"
+                document.getElementById("selector").style.display = "none"
+            } else if (urlParams.get('mode')==None) {
+                document.getElementById('message').style.display='none'
+            } else{
+                document.getElementById('message').style.display = "block"
+            }
+
+        }
         function checkAns() {
             let answer = document.getElementById("ans").innerText;
             let userAns = document.getElementById("userans").value
@@ -18,15 +34,43 @@
             }
 
         }
+
+        function select() {
+            const rbs = document.querySelectorAll('input[name="mode"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue=rb.value;
+                    break;
+                }
+            }
+            if (selectedValue=="Single-Q") {
+                document.getElementById("quizS").style.display="block"
+            } else {
+                document.getElementById("quizT").style.display="block"
+            }
+        }
     </script>
     <style>
+        #selector {
+            margin: 0 auto;
+            width: 80%;
+            padding:2em;
+        }
+        /*#selector form {
+            padding: 2em;
+        }*/
+
+        #selector label {
+            margin-bottom: 20px;
+        }
         .quiz {
             margin: 0 auto;
             text-align: center;
             width: 60%;
             padding: 3em;
         }
-        input {
+        .quiz input {
             width: 100%;
             padding: 1em;
             box-sizing: border-box;
@@ -34,7 +78,7 @@
             border: none ;
             border-radius: 10px;
         }
-        input:focus {
+        .quiz input:focus {
             background-color: #ffffff;
             outline: none;
             border: none;
@@ -42,7 +86,7 @@
         .quiz h3,.quiz input,.quiz button,.quiz p {
             margin-bottom: 25px;
         }
-        button {
+        .quiz button {
             width: 100%;
         }
         a {
@@ -65,10 +109,21 @@
 
     </style>
 </head>
-<body>
+<body onload="mode()">
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
-<h1>the mode is {{ mode }}</h1>
-<div class="quiz" style="display: none">
+<div id="selector">
+    <h2 style="margin-bottom: 15px;">Select Mode</h2>
+<form>
+    <input type="radio" name="mode" value="Single-Q" id="SQ">
+    <label for="SQ">Single Question</label>
+    <br>
+    <input type="radio" name="mode" value="test" id="test">
+    <label for="test">Test</label>
+    <br>
+    <button id="sub" onclick="select()">Submit</button>
+</form>
+</div>
+<div class="quiz" id="quizS" style="display: none">
     <h3 style="color: black">{{ question[0]['question']}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
@@ -82,7 +137,11 @@
     </form>-->
     <p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
     <p id="results"></p>
-    <a class="but" href="/quiz/">Next Question &#10148;</a>
+    <a class="but" href="/quiz?mode=Single-Q">Next Question &#10148;</a>
 </div>
+<div id="quizT" style="display: none">
+    <p>test mode under construction</p>
+</div>
+<p id="message" style="display: none;">mode not available</p>
 </body>
 </html>
