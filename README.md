@@ -18,9 +18,46 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Matthew|[Gavin & Matthew](https://docs.google.com/document/d/15cVsCQSUeyoJkEMfILLqKer-sS05JoyyKEIUflzvqqg/edit?usp=sharing)
 |Samuel|[Samuel & Sanjay](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit?usp=sharing)
 
+## Week 9
+| Task | Description of Task | Link to Task|
+| - | - | - |
+|API Trivia|Add the actual trivia quiz to our project|[API Trivia](https://github.com/SanjayB06/flask_portfolio/issues/62)|
+|Topic List|Add a list or dictionary of our trivia topics|[Topics List](https://github.com/SanjayB06/flask_portfolio/issues/63)|
+|New Color Scheme|Change the color scheme from the previous green and pink to dark blue and grey|[New Color Scheme](https://github.com/SanjayB06/flask_portfolio/issues/64)|
+|Wireframe Page|Add a page on our project showing the previous wireframes we have done|[Wireframe Page](https://github.com/SanjayB06/flask_portfolio/issues/67)|
+|History Trivia Page|Make the page for the history trivia topic|[History Trivia Page](https://github.com/SanjayB06/flask_portfolio/issues/68)|
+
+| Names | Description of what User did | Link to Tangible|
+| - | - | - |
+|Sanjay|Make the skeleton for the trivia quiz <br> Add trivia quiz to our project|[API Trivia Added](https://github.com/SanjayB06/flask_portfolio/commit/a5c2c7ec967278ab6f52b98336b8f72e3f2e3509) <br> [Skeleton Quiz Functionality](https://github.com/SanjayB06/flask_portfolio/commit/8103cf76f7ddc03036ca12eb1169960d2822f52e)|
+|Gavin|Add dictionary of the different trivia topics|[Topic List](https://github.com/SanjayB06/flask_portfolio/commit/26eb2ebd8891ce90e4762611b065c56bbd79c4e1)|
+|Matthew|Change the color scheme from the previous green and pink to dark blue and grey|[New Color Scheme](https://github.com/SanjayB06/flask_portfolio/commit/a358e25fa5cfc22a2226f9ed0d8380311e6d75a1)|
+|Samuel|Add a page on our project showing the previous wireframes we have done <br> Make the page for the history trivia topic|[Wireframe Page](https://github.com/SanjayB06/flask_portfolio/commit/3b4fb3a09e99d27ce74505be11c0a6c9b652db41) <br> [History Trivia Page](https://github.com/SanjayB06/flask_portfolio/commit/3b4fb3a09e99d27ce74505be11c0a6c9b652db41)|
+
+## Week 8
+| Task | Description of Task | Link to Task|
+| - | - | - |
+|Hover Navbar|Add hovering effect for navbar|[Hover Navbar](https://github.com/SanjayB06/flask_portfolio/issues/66)|
+|More Navbar Menus|Add more dropdowns for navbar|[More Navbar Menus](https://github.com/SanjayB06/flask_portfolio/issues/65)|
+|Redesign Unsigned Addition|Change font color and table in binar_addition.html|[Redesign Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/issues/70)|
+|Change Color Scheme|Change the color scheme from blue and yellow to pink and green|[Change Color Scheme](https://github.com/SanjayB06/flask_portfolio/issues/71)|
+
+| Names | Description of what User did | Link to Tangible|
+| - | - | - |
+|Sanjay|Redesign whole navbar and restyle binary.html|[Hover Navbar](https://github.com/SanjayB06/flask_portfolio/commit/0d870ae0ece20e16090db08c2a5d8beefaa24e60)|
+|Gavin|Complete unsigned addition from last week <br> Redesign Unsigned Addition page|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/commit/5bdacc212c7df64b5f49892be66574ba6932b5b7) <br> [Unsigned Addition Design] (https://github.com/SanjayB06/flask_portfolio/commit/55b108dfb7c833aacf90412bc5541434522fb3a0)|
+|Matthew|Add second dropdown in navbar called Minilabs containing Binarylabs, Conceptuals, and Wireframing Activity|[More Navbar Menus](https://github.com/SanjayB06/flask_portfolio/commit/abd1b9976fad0837b039ce4b0c96895baa2e0710)|
+|Samuel|Change color scheme of binary.html and navbar|[Restyling](https://github.com/SanjayB06/flask_portfolio/commit/d497dc4f690a428dc88110af27e36001b166b343)|
+
 ## Week 7
 | Task | Description of Task | Link to Task|
 | - | - | - |
+|Extend ASCII to Unicode|Change ASCII to unicode|[Extend ASCII to Unicode](https://github.com/SanjayB06/flask_portfolio/issues/57)|
+|Multiply and divide by 2|Add multiplication and division to binary.html|[Multiply and divide by 2](https://github.com/SanjayB06/flask_portfolio/issues/58)|
+|Signed Addition|Add negative values to binary|[Signed Addition](https://github.com/SanjayB06/flask_portfolio/issues/53)|
+|Logic Gates|Make a table displaying the understanding of CB materials|[Logic Gates](https://github.com/SanjayB06/flask_portfolio/issues/54)|
+|Unsigned Addition|Add three rows of bits with the first two rows displaying the values and the last row showing the sum or the difference of the first two rows|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/issues/55)|
+|Color Codes|Display three rows of 8 bits.  Allow for code to be 0 to 255, show color for RGB.  Also, show color for R,G,B independently|[Color Codes](https://github.com/SanjayB06/flask_portfolio/issues/56)|
 
 | Names | Description of what User did | Link to Tangible|
 | - | - | - |
@@ -28,20 +65,17 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Gavin|Create new HTML file with 3 rows of 8 bits for addition|[Unsigned Addition](https://github.com/SanjayB06/flask_portfolio/commit/c00c2462c4a66b2cea7fe43e3526bba3e5e3044d)|
 |Matthew|Created color code page <br> Minor styling on Color Code page|[Color Code Creation](https://github.com/SanjayB06/flask_portfolio/commit/0d258410d89ea94fa9a044ab95f9d82859f9e9a6) <br> [Minor Styling on Color Code Page](https://github.com/SanjayB06/flask_portfolio/commit/355493ebcb848d31d34629f17c9edbeca6ee9524)|
 |Samuel|Created logic gates page <br> Logic gates styling|[Logic Gates](https://github.com/SanjayB06/flask_portfolio/commit/178f6c8b5aee092213cb604f1c632dd18304dbbc)<br> [Styling on Logic Gates Page](https://github.com/SanjayB06/flask_portfolio/commit/17ad57fe58330b904c424c18bd60affda3141c85)|
-||||
 
 ## Week 6
 | Task | Description of Task | Link to Task|
 | - | - | - |
 |Research/Study sheet/journal - Bases|Take notes for base|[Research/Study sheet/journal - Bases](https://docs.google.com/document/d/1i3fQiK66CaWRttSvIi_TQ9aSXb4Agyx7Tqr5Q7ZF0ek/edit#bookmark=id.72bb4e2ex44l)|
-|RGB Values with Image - Frontend|Add greyscale for RGB||
-|RGB Values with an Image, Backend|Add text on top of images in RGB||
-|RGB Values with an Image, New Development|Display the RGB value of the image||
+|RGB Values with Image - Frontend|Add greyscale for RGB|[RGB Greyscale](https://github.com/SanjayB06/flask_portfolio/issues/49)|
+|RGB Values with an Image, Backend|Add text on top of images in RGB|[RGB- adding text on image](https://github.com/SanjayB06/flask_portfolio/issues/50)|
+|RGB Values with an Image, New Development|Display the RGB value of the image|[RGB Values with an Image, New Development](https://github.com/SanjayB06/flask_portfolio/issues/44)|
 |Documentation|Cite examples from code describing our project layout and explaining the layout files and reasoning behind organization|[Documentation](https://github.com/SanjayB06/flask_portfolio/issues/47)|
-|RGB Greyscale|||
-|RGB- adding text on image|||
-|Add Loop to RGB image Manipulation|||
-|Add Image Rotation|||
+|Add Loop to RGB image Manipulation|Add second image to RGB.html|[Add Loop to RGB image Manipulation](https://github.com/SanjayB06/flask_portfolio/issues/59)|
+|Add Image Rotation|Make image rotate when entering the RGB page|[Add Image Rotation](https://github.com/SanjayB06/flask_portfolio/issues/60)|
 
 | Names | Description of what User did | Link to Tangible|
 | - | - | - |
