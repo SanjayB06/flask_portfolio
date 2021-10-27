@@ -156,9 +156,6 @@ def study():
     output = json.loads(response.text)
     return render_template('study.html', question=output)
 
-@app.route('/gaem/')
-def gaem():
-    return render_template("gaem.html")
 
 @app.route('/instructions/')
 def instructions():
@@ -166,14 +163,23 @@ def instructions():
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
-    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
-    headers = {
-        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-        'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
-    }
-    response = requests.request("GET", url, headers=headers)
-    output = json.loads(response.text)
-    return render_template("quiz.html", question=output,topic='animals')
-topics = []
+    topic = "entertainment"
+    output = [{'category':None}]
+    while output[0]['category'] != topic:
+        url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+        headers = {
+            'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+            'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+        }
+        response = requests.request("GET", url, headers=headers)
+        output = json.loads(response.text)
+    return render_template("quiz.html", question=output)
+
+@app.route('/gaem/')
+def gaem():
+    return render_template("gaem.html")
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
