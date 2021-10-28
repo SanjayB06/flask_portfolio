@@ -1,0 +1,22 @@
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Trivia</title>
+</head>
+<style>
+    input {
+        color: #0e387a;
+
+    }
+</style>
+<body>
+<form action="/mathtrivia/" method="post">
+    <input type="number" class="txtbx" name="userInput" value={{ userInput }}><br>
+    <input type="submit" value="Submit">
+</form>
+<p>{{ trivia['text'] }}</p>
+<p>{{ trivia['number'] }}</p>
+</body>
+</html>

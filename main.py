@@ -179,6 +179,20 @@ def quiz():
 def gaem():
     return render_template("gaem.html")
 
+@app.route('/mathtrivia/',methods=['GET', 'POST'])
+def mathtrivia():
+    userInput= 0
+    if request.method == 'POST':
+        userInput = int(request.form['userInput'])
+    url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=int(userInput))
+    querystring = {"fragment":"v8","notfound":"floor","json":"true"}
+    headers = {
+    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+    'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
+}
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    output = json.loads(response.text)
+    return render_template("mathtrivia.html", trivia=output, userInput=userInput)
 
 
 if __name__ == "__main__":
