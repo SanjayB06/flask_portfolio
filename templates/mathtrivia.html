@@ -6,9 +6,8 @@
     <title>Math Trivia</title>
 </head>
 <style>
-    input {
-        color: #0e387a;
-
+    .billy {
+        background-color: #0e387a;
     }
 </style>
 <body>
@@ -16,7 +15,9 @@
     <input type="number" class="txtbx" name="userInput" value={{ userInput }}><br>
     <input type="submit" value="Submit">
 </form>
+<div class="billy">
 <p>{{ trivia['text'] }}</p>
 <p>{{ trivia['number'] }}</p>
+    </div>
 </body>
 </html>
