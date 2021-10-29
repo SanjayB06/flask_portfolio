@@ -123,7 +123,7 @@
 </form>
 </div>
 <div class="quiz" id="quizS" style="display: none">
-    <h3 style="color: black">{{ question[0]['question']}}</h3>
+    <h3 style="color: black">{{ question['question']}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
     <button class="but" onclick="checkAns()">SUBMIT</button>
@@ -134,7 +134,7 @@
         <br>
         <button id="test" onclick="checkAns()">submit</button>
     </form>-->
-    <p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
+    <p id = "ans"style="display:none">{{ question['answer'] }}</p>
     <p id="results"></p>
     <a class="but" href="/quiz?mode=Single-Q">Next Question &#10148;</a>
 </div>
