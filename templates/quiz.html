@@ -22,6 +22,12 @@
             } else{
                 document.getElementById('message').style.display = "block"
             }
+            if (document.getElementsByTagName('link')[0].getAttribute('href') == '/static/dark.css') {
+                document.body.className = 'dark-theme'
+
+            } else {
+                document.body.className = 'light-theme'
+            }
         }
         function checkAns() {
             let answer = document.getElementById("ans").innerText;
@@ -36,6 +42,12 @@
 
     </script>
     <style>
+        body.dark-theme {
+            color: white
+        }
+        body.light-theme {
+            color: black
+        }
         #selector {
             margin: 0 auto;
             width: 80%;
@@ -115,6 +127,16 @@
         <h4>Topic:</h4>
         <input type="radio" name="topic" id="general" value="general">
         <label for="radio">General</label><br>
+        <input type="radio" name="topic" id="history" value="history">
+        <label for="radio">History</label><br>
+        <input type="radio" name="topic" id="sports" value="sports">
+        <label for="radio">Sports</label><br>
+        <input type="radio" name="topic" id="art" value="art">
+        <label for="radio">Art</label><br>
+        <input type="radio" name="topic" id="science" value="science">
+        <label for="radio">Science</label><br>
+        <input type="radio" name="topic" id="geography" value="geography">
+        <label for="radio">Geography</label><br>
         <input type="radio" name="topic" id="math" value="math">
         <label for="radio">Math/Number</label><br>
         <input type="submit" value="Submit">
