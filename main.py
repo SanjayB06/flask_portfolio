@@ -180,9 +180,9 @@ def movieapi():
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
-    topic = "general"
+    topic = request.args.get('topic')
     if topic == "math":
-        url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=int(userInput))
+        url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=random.randint(0,40))
         querystring = {"fragment":"v8","notfound":"floor","json":"true"}
         headers = {
             'x-rapidapi-host': "numbersapi.p.rapidapi.com",
@@ -190,7 +190,8 @@ def quiz():
         }
         response = requests.request("GET", url, headers=headers, params=querystring)
         output = json.loads(response.text)
-    if topic == "general":
+        selectors = ['text','number']
+    else:
         url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
         headers = {
             'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
@@ -198,7 +199,11 @@ def quiz():
         }
         response = requests.request("GET", url, headers=headers)
         output = json.loads(response.text)[0]
-    return render_template("quiz.html", question=output)
+        selectors=['question','answer']
+    mode='Single-Q'
+    if request.form:
+        mode = request.form['mode']
+    return render_template("quiz.html", question=output, selectors=selectors,topic=topic,mode=mode)
 
 @app.route('/gaem/')
 def gaem():
