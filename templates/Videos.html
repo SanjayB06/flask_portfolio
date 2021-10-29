@@ -3,14 +3,13 @@
 
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
-
+<script type="text/javascript" src="/static/theme.js"></script>
 <!- This is a replacement block for Body in base.html -->
-{% block body %}
+<body onload="checkMode()">
 <h1>Video Journals</h1>
 <h2>Video Journal 0</h2>
     <iframe width="500" height="281.35738831615123" src="https://www.youtube.com/embed/iMdARprhhZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{% endblock %}
-
+</body>
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}

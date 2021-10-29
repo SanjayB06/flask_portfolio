@@ -145,8 +145,8 @@ def start():
     ]
     return render_template("modes.html", topics=topic,modes=modes)
 
-@app.route('/study/',methods=['GET','POST'])
-def study():
+@app.route('/study_general/',methods=['GET','POST'])
+def study_general():
     url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
     headers = {
         'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
@@ -154,7 +154,7 @@ def study():
     }
     response = requests.request("GET", url, headers=headers)
     output = json.loads(response.text)
-    return render_template('study.html', question=output)
+    return render_template('study_general.html', question=output)
 
 
 @app.route('/instructions/')
@@ -163,16 +163,13 @@ def instructions():
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
-    topic = "entertainment"
-    output = [{'category':None}]
-    while output[0]['category'] != topic:
-        url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
-        headers = {
-            'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-            'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
-        }
-        response = requests.request("GET", url, headers=headers)
-        output = json.loads(response.text)
+    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+    headers = {
+        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+        'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+    }
+    response = requests.request("GET", url, headers=headers)
+    output = json.loads(response.text)
     return render_template("quiz.html", question=output)
 
 @app.route('/gaem/')
