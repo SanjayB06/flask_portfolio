@@ -6,7 +6,7 @@ import json
 # create a Flask instance
 app = Flask(__name__)
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-
+import random
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -161,15 +161,43 @@ def study_general():
 def instructions():
     return render_template("instructions.html")
 
+@app.route('/movieapi/')
+def movieapi():
+    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
+    querystring = {"r":"json","type":"movie","i":"tt{id}".format(id=random.randint(1000000,4000000))}
+
+    headers = {
+        'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
+        'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
+    data = json.loads(response.text)
+    print(data)
+    return render_template("movieapi.html", moviequiz=data)
+# add code to see if the movie title exists, if it doesn't repull
+
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
-    url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
-    headers = {
-        'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-        'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
-    }
-    response = requests.request("GET", url, headers=headers)
-    output = json.loads(response.text)
+    topic = "general"
+    if topic == "math":
+        url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=int(userInput))
+        querystring = {"fragment":"v8","notfound":"floor","json":"true"}
+        headers = {
+            'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+            'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
+        }
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        output = json.loads(response.text)
+    if topic == "general":
+        url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+        headers = {
+            'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+            'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+        }
+        response = requests.request("GET", url, headers=headers)
+        output = json.loads(response.text)[0]
     return render_template("quiz.html", question=output)
 
 @app.route('/gaem/')
