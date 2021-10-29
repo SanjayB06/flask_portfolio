@@ -34,21 +34,6 @@
 
         }
 
-        function select() {
-            const rbs = document.querySelectorAll('input[name="mode"]');
-            let selectedValue;
-            for (const rb of rbs) {
-                if (rb.checked) {
-                    selectedValue=rb.value;
-                    break;
-                }
-            }
-            if (selectedValue=="Single-Q") {
-                document.getElementById("quizS").style.display="block"
-            } else {
-                document.getElementById("quizT").style.display="block"
-            }
-        }
     </script>
     <style>
         #selector {
@@ -111,8 +96,8 @@
 <body onload="mode()">
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
 <div id="selector">
-    <h2 style="margin-bottom: 15px;">Select Mode</h2>
-<form>
+    <h2 style="margin-bottom: 15px;">Configurations</h2>
+<!--<form>
     <input type="radio" name="mode" value="Single-Q" id="SQ">
     <label for="SQ">Single Question</label>
     <br>
@@ -120,10 +105,24 @@
     <label for="test">Test</label>
     <br>
     <button id="sub" onclick="select()">Submit</button>
-</form>
+</form>-->
+    <form action="/quiz/">
+        <h4>Mode:</h4>
+        <input type="radio" name="mode" id="Single-Q" value="Single-Q">
+        <label for="radio">Single Questions</label><br>
+        <input type="radio" name="mode" id="test" value="test">
+        <label for="radio">Test</label><br><br>
+        <h4>Topic:</h4>
+        <input type="radio" name="topic" id="general" value="general">
+        <label for="radio">General</label><br>
+        <input type="radio" name="topic" id="math" value="math">
+        <label for="radio">Math/Number</label><br>
+        <input type="submit" value="Submit">
+    </form>
+
 </div>
 <div class="quiz" id="quizS" style="display: none">
-    <h3 style="color: black">{{ question[0]['question']}}</h3>
+    <h3 style="color: black">{{ question[selectors[0]]}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
     <button class="but" onclick="checkAns()">SUBMIT</button>
@@ -134,9 +133,9 @@
         <br>
         <button id="test" onclick="checkAns()">submit</button>
     </form>-->
-    <p id = "ans"style="display:none">{{ question[0]['answer'] }}</p>
+    <p id = "ans"style="display:none">{{ question[selectors[1]] }}</p>
     <p id="results"></p>
-    <a class="but" href="/quiz?mode=Single-Q">Next Question &#10148;</a>
+    <a class="but" href="/quiz?mode=Single-Q&topic={{ topic }}">Next Question &#10148;</a>
 </div>
 <div id="quizT" style="display: none">
     <p>test mode under construction</p>
