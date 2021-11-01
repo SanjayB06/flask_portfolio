@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script type="text/javascript" src="/static/theme.js" ></script>
     <style>
         .maincontainer img {
             width: 200px;
@@ -37,25 +38,47 @@
         p {
             margin-bottom: 10px;
         }
-        .topicContainer a, .but {
+        body.light-theme .topicContainer a, .but {
             text-decoration: none;
             padding: .5em 1em;
             border: 1px solid #0e387a;
             transition: background-color .4s;
             color: #0e387a;
         }
+        body.dark-theme .topicContainer a, .but {
+            text-decoration: none;
+            padding: .5em 1em;
+            border: 1px solid darkorange;
+            transition: background-color .4s;
+            color: darkorange;
+        }
+
         .butcont {
             text-align: center;
             margin-top: 15px;
         }
 
-        .topicContainer a:hover, .but:hover {
+        body.light-theme .topicContainer a:hover, .but:hover {
             background-color: #0e387a;
             color: white;
         }
+        body.dark-theme .topicContainer a:hover, .but:hover {
+            background-color: darkorange;
+            color: #404E74;
+        }
+        body.light-theme {
+            color: black;
+        }
+        body.light-theme h3{
+            color:black
+        }
+        body.dark-theme {
+            color:white;
+        }
+
     </style>
 </head>
-<body>
+<body onload="checkMode()">
 <h1>Start the Quiz</h1>
 <div class="butcont"><a class="but" href="/quiz/">Play Now</a></div>
 <div class="maincontainer">
@@ -65,7 +88,7 @@
             <img src="{{x.image1}}" alt="brain picture">
         </div>
             <div class="text">
-                <h3 style="color: black">{{ x['topic'] }}</h3>
+                <h3>{{ x['topic'] }}</h3>
                 <p>{{ x['Description'] }}</p>
                 <a href="/start/">Play Topic</a>
             </div>
@@ -74,7 +97,7 @@
     {% for x in modes %}
         <div class="topicContainer">
             <div class="right">
-                <h3 style="color:black;margin-bottom: 10px">{{ x['name'] }}</h3>
+                <h3 style="margin-bottom: 10px">{{ x['name'] }}</h3>
                 <a href="/quiz?mode={{ x['param'] }}">Play {{ x['name'] }}</a>
             </div>
             <p>{{ x['Description'] }}</p>

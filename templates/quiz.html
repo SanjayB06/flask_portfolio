@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Study</title>
-    <script>
+    <script type="text/javascript" src="/static/theme.js">
         function mode() {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString)
@@ -42,6 +42,9 @@
 
     </script>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body.dark-theme {
             color: white
         }
@@ -92,23 +95,86 @@
         .but {
             font-size: 14px;
             padding: 1em;
-            border: 2px solid #0e387a;
             border-radius: 20px;
             background-color: transparent;
             transition: background-color .5s;
+            width: 100%;
         }
-        .but:hover {
+        body.light-theme .but {
+            border: 2px solid #0e387a;
+        }
+        body.dark-theme .but {
+            border: 2px solid darkorange;
+            color: white;
+        }
+        body.light-theme .but:hover {
             background-color: #0e387a;
             color: #ffffff;
         }
+        body.dark-theme .but:hover {
+            background-color: darkorange;
+            color: #0e387a;
+        }
 
+        /*.radio-form {
+            font-size: 20px;
+        }
+        .radio-form + .radio-form {
+            margin-top: 1em;
+        }
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: #ffffff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid currentColor;
+            border-radius: 50%;
+            transform: translateY(-0.075em);
+            display: grid;
+            place-content: center;
+        }
+        input[type="radio"]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em darkorange;
+            background-color: #0e387a;
 
+        }
+        input[type="radio"]:checked::before {
+            transform: scale(1);
+        }
+        input[type="radio"]:focus {
+            outline: max(2px, 0.15em) solid currentColor;
+            outline-offset: max(2px, 0.15em);
+        }
+        .radio-form:focus-within {
+            color: darkorange;
+        }*/
+        .form-section {
+            font-size: 20px;
+        }
+        .form {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 25px;
+        }
     </style>
 </head>
 <body onload="mode()">
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
 <div id="selector">
-    <h2 style="margin-bottom: 15px;">Configurations</h2>
+    <h2 style="font-size: 30px;text-align:center; margin-bottom: 15px;">Configurations</h2>
 <!--<form>
     <input type="radio" name="mode" value="Single-Q" id="SQ">
     <label for="SQ">Single Question</label>
@@ -119,27 +185,33 @@
     <button id="sub" onclick="select()">Submit</button>
 </form>-->
     <form action="/quiz/">
-        <h4>Mode:</h4>
-        <input type="radio" name="mode" id="Single-Q" value="Single-Q">
-        <label for="radio">Single Questions</label><br>
-        <input type="radio" name="mode" id="test" value="test">
-        <label for="radio">Test</label><br><br>
-        <h4>Topic:</h4>
-        <input type="radio" name="topic" id="general" value="general">
-        <label for="radio">General</label><br>
-        <input type="radio" name="topic" id="history" value="history">
-        <label for="radio">History</label><br>
-        <input type="radio" name="topic" id="sports" value="sports">
-        <label for="radio">Sports</label><br>
-        <input type="radio" name="topic" id="art" value="art">
-        <label for="radio">Art</label><br>
-        <input type="radio" name="topic" id="science" value="science">
-        <label for="radio">Science</label><br>
-        <input type="radio" name="topic" id="geography" value="geography">
-        <label for="radio">Geography</label><br>
-        <input type="radio" name="topic" id="math" value="math">
-        <label for="radio">Math/Number</label><br>
-        <input type="submit" value="Submit">
+        <div class="form">
+            <div class="form-section">
+                <h4>Mode:</h4>
+                <label class="radio-form"><input type="radio" name="mode" id="Single-Q" value="Single-Q">
+                Single Questions</label><br>
+                <label class="radio-form"><input type="radio" name="mode" id="test" value="test" >
+                Test</label><br><br>
+            </div>
+            <div class="form-section">
+                <h4>Topic:</h4>
+                <label class="radio-form"><input type="radio" name="topic" id="general" value="general">
+                General</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="history" value="history">
+                History</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="sports" value="sports">
+                Sports</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="religion" value="religion">
+                Religion</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="science" value="science">
+                Science</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="geography" value="geography">
+                Geography</label><br>
+                <label class="radio-form"><input type="radio" name="topic" id="math" value="math">
+                Math/Number</label><br>
+            </div>
+        </div>
+        <input class='but' type="submit" value="Submit">
     </form>
 
 </div>
