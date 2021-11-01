@@ -165,7 +165,7 @@ def instructions():
 def movieapi():
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
     querystring = {"r":"json","type":"movie","i":"tt{id}".format(id=random.randint(1000000,4000000))}
-
+#rapidapi code that provides parameters
     headers = {
         'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
         'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
