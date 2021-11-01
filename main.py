@@ -165,15 +165,18 @@ def instructions():
 def movieapi():
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
     querystring = {"r":"json","type":"movie","i":"tt{id}".format(id=random.randint(1000000,4000000))}
-#rapidapi code that provides parameters
+
     headers = {
         'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com",
         'x-rapidapi-key': "7815f70232mshea0c87cc336b4aap13f459jsn464272722115"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
     data = json.loads(response.text)
+    print(data)
     return render_template("movieapi.html", moviequiz=data)
+# add code to see if the movie title exists, if it doesn't repull
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
@@ -233,9 +236,9 @@ def mathtrivia():
     url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=int(userInput))
     querystring = {"fragment":"v8","notfound":"floor","json":"true"}
     headers = {
-    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-    'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
-}
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
+    }
     response = requests.request("GET", url, headers=headers, params=querystring)
     output = json.loads(response.text)
     return render_template("mathtrivia.html", trivia=output, userInput=userInput)

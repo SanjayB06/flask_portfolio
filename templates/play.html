@@ -1,0 +1,29 @@
+{% include "ournav.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3 style="color: black">{{ question[selectors[0]]}}</h3>
+<input type="text" id="userans" placeholder="answer goes here">
+<br>
+<button class="but" onclick="checkAns()">SUBMIT</button>
+<!--<form action="/quiz/" method="post">
+        <label>Answer: </label>
+        <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
+
+        <br>
+        <button id="test" onclick="checkAns()">submit</button>
+    </form>-->
+<p id = "ans"style="display:none">{{ question[selectors[1]] }}</p>
+<p id="results"></p>
+<a class="but" href="/quiz?mode=Single-Q&topic={{ topic }}">Next Question &#10148;</a>
+
+<p>{{ topic }}</p>
+</body>
+</html>
