@@ -8,19 +8,9 @@
 <body>
 
 
-<p>What year was {{ data['Year']}} released in?</p>
+<p>What year was {{ moviequiz['Year']}} released in?</p>
 
 <script>
-    function check() {
-        let Year = document.getElementById("Year");
-        let input = document.getElementById("input").value;
-        if (Year == input) {
-            document.getElementById("results").innerText = "Correct!!!";
-        } else  {
-            document.getElementById("results").innerText="Wrong";
-        }
-        document.getElementById('input').innerText = input;
-    }
 </script>
 <style>
     button{
@@ -43,7 +33,7 @@
 
 <button class="button" onclick="check()">Submit</button>
 
-<p>{{data ['Year']}}</p>
+<p>{{moviequiz ['Year']}}</p>
 
 <div class="card" style=
         "color: #ffffff;

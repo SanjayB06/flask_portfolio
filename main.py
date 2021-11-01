@@ -172,11 +172,8 @@ def movieapi():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    print(response.text)
     data = json.loads(response.text)
-    print(data)
     return render_template("movieapi.html", moviequiz=data)
-# add code to see if the movie title exists, if it doesn't repull
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
