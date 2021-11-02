@@ -179,7 +179,12 @@
     <a class="but" href="/quiz?mode=Single-Q&topic={{ topic }}">Next Question &#10148;</a>
 </div>
 <div id="quizT" style="display: none">
-    <p>test mode under construction</p>
+    {% for i in range(5) %}
+        <h4>Question goes here</h4>
+        <input type="text" id="q{{ i }}" placeholder="Enter Answer">
+        <br>
+    {% endfor %}
+    <button class="but1">SUBMIT</button>
 </div>
 <p id="message" style="display: none;">mode not available</p>
 <p id="topic" style="display: none"></p>
