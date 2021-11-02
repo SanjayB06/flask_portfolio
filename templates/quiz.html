@@ -35,7 +35,7 @@
             if (userAns.toLowerCase()==answer.toLowerCase()) {
                 document.getElementById("results").innerText="THE ANSWER IS CORRECT"
             } else {
-                document.getElementById("results").innerText= ("Your answer is incorrect. The correct answer is \""+answer + "\". You answered \"" + userAns+"\"")
+                document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is \""+answer + "\". you answered \"" + userAns+"\"")
             }
 
         }
@@ -47,6 +47,12 @@
         }
         body.light-theme {
             color: black
+        }
+        body.light-theme h3{
+            color: black;
+        }
+        body.dark-theme h3 {
+            color: white;
         }
         #selector {
             margin: 0 auto;
@@ -89,19 +95,33 @@
             text-decoration: none;
             color: #000000;
         }
-        .but {
+        .but,.but1 {
+            margin-top: 20px;
             font-size: 14px;
-            padding: 1em;
-            border: 2px solid #0e387a;
+            padding: .5em 2em;
             border-radius: 20px;
             background-color: transparent;
             transition: background-color .5s;
         }
-        .but:hover {
+        .but1 {
+            padding: 1em;
+        }
+        body.light-theme .but,body.light-theme .but1 {
+            border: 2px solid #0e387a;
+            color: black;
+        }
+        body.dark-theme .but,body.dark-theme .but1 {
+            border: 2px solid darkorange;
+            color: white;
+        }
+        body.light-theme .but:hover, body.light-theme .but1:hover {
             background-color: #0e387a;
             color: #ffffff;
         }
-
+        body.dark-theme .but:hover, body.dark-theme .but1:hover {
+            background-color: darkorange;
+            color: #0e387a;
+        }
 
     </style>
 </head>
@@ -139,15 +159,15 @@
         <label for="radio">Geography</label><br>
         <input type="radio" name="topic" id="math" value="math">
         <label for="radio">Math/Number</label><br>
-        <input type="submit" value="Submit">
+        <input class="but" type="submit" value="Submit">
     </form>
 
 </div>
 <div class="quiz" id="quizS" style="display: none">
-    <h3 style="color: black">{{ question[selectors[0]]}}</h3>
+    <h3>{{ question[selectors[0]]}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
-    <button class="but" onclick="checkAns()">SUBMIT</button>
+    <button class="but1" onclick="checkAns()">SUBMIT</button>
     <!--<form action="/quiz/" method="post">
         <label>Answer: </label>
         <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
