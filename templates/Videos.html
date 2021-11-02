@@ -1,9 +1,23 @@
 <!-- Extending the predefined project layout -->
 {% include "ournav.html" %}
-
-<!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 <script type="text/javascript" src="/static/theme.js"></script>
+<style>
+    body.light-theme {
+        color: black;
+    }
+    body.dark-theme {
+        color: white;
+    }
+</style>
 <!- This is a replacement block for Body in base.html -->
 <body onload="checkMode()">
 <h1>Video Journals</h1>
@@ -11,5 +25,4 @@
     <iframe width="500" height="281.35738831615123" src="https://www.youtube.com/embed/iMdARprhhZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 <!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}
+</html>

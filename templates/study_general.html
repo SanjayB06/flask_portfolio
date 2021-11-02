@@ -18,6 +18,22 @@
                 document.getElementById('toggler').innerText = 'Show Answer'
             }
         }
+        function checkMode() {
+            const currentTheme = localStorage.getItem("theme");
+            if (currentTheme == "light") {
+                document.body.className = 'light-theme'
+            }
+            if (currentTheme=="dark") {
+                document.body.className = 'dark-theme'
+            }
+            if (document.getElementsByTagName('link')[0].getAttribute('href') == '/static/dark.css') {
+                document.body.className = 'dark-theme'
+
+            } else {
+                document.body.className = 'light-theme'
+            }
+        }
+
     </script>
     <style>
         nav {
@@ -25,6 +41,12 @@
         }
         body {
             text-align: center;
+        }
+        body.light-theme h1 {
+            color: black;
+        }
+        body.dark-theme h1 {
+            color: white;
         }
         .maincontainer {
             width: 80%;
@@ -55,7 +77,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="checkMode()">
 <h1 style="margin-top:25px; font-size: 50px ">Learn Trivia</h1>
 <div class="maincontainer">
     {% for topic in question %}

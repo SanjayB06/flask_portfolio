@@ -4,20 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Math Trivia</title>
+    <script type="text/javascript" src="/static/theme.js"></script>
 </head>
 <style>
     .billy {
         background-color: #0e387a;
+        color: #ffffff;
+        width: 250px;
+        border-radius: 40px;
+        padding: 1em 1.5em;
+        margin: auto;
+    }
+    .but    {
+        font-weight: bold;
+        display: inline-block;
+        width: 30%;
+        padding: 12px;
+        vertical-align: middle;
+    }
+    .txtbx {
+        margin: auto;
+        text-align: center;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #change {
+        width: 65%;
+        padding: 12px;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        vertical-align: middle;
+        height: 100%;
+    }
+    #change:focus {
+        background-color: #5a70ad;
     }
 </style>
-<body>
-<form action="/mathtrivia/" method="post">
-    <input type="number" class="txtbx" name="userInput" value={{ userInput }}><br>
-    <input type="submit" value="Submit">
-</form>
+<body onload="checkMode()">
+<br>
+<br>
 <div class="billy">
-<p>{{ trivia['text'] }}</p>
-<p>{{ trivia['number'] }}</p>
-    </div>
+    <p>{{ trivia['text'] }}</p>
+    <br>
+    <p> Number:   {{ trivia['number'] }}</p>
+</div>
+<br>
+<form class="txtbx" action="/mathtrivia/" method="post">
+    <input id="change"type="number"  name="userInput" value={{ userInput }}>
+    <input type="submit" class="but" value="Submit">
+    <br>
+</form>
+
+
 </body>
 </html>
