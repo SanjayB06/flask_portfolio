@@ -46,6 +46,20 @@
             }
 
         }
+        function checkTest() {
+            for (let i=0;i<5;i++){
+                let answer = document.getElementById("ans" + i).innerText;
+                let userAns = document.getElementById("q" + i).value;
+                if (userAns.toLowerCase() == answer.toLowerCase()) {
+                    document.getElementById("result" + i).innerText = "THE ANSWER IS CORRECT";
+                    document.getElementById("result"+i).style.display="block"
+                } else {
+                    document.getElementById('result' + i).innerText = ("The answer is incorrect. The correct answer is \""+answer+"\". You answered \""+userAns+"\".");
+                    document.getElementById("result"+i).style.display="block"
+
+                }
+            }
+        }
 
     </script>
     <style>
@@ -136,15 +150,6 @@
 <h1 style="text-align: center">TRIVIA QUIZ</h1>
 <div id="selector">
     <h2 style="margin-bottom: 15px;">Configurations</h2>
-    <!--<form>
-        <input type="radio" name="mode" value="Single-Q" id="SQ">
-        <label for="SQ">Single Question</label>
-        <br>
-        <input type="radio" name="mode" value="test" id="test">
-        <label for="test">Test</label>
-        <br>
-        <button id="sub" onclick="select()">Submit</button>
-    </form>-->
     <form action="/quiz/">
         <h4>Mode:</h4>
         <input type="radio" name="mode" id="Single-Q" value="Single-Q">
@@ -171,27 +176,23 @@
 
 </div>
 <div class="quiz" id="quizS" style="display: none">
-    <h3>{{ question[selectors[0]]}}</h3>
+    <h3>{{ question[0][selectors[0]]}}</h3>
     <input type="text" id="userans" placeholder="answer goes here">
     <br>
     <button class="but1" onclick="checkAns()">SUBMIT</button>
-    <!--<form action="/quiz/" method="post">
-        <label>Answer: </label>
-        <input type="text" id="userans" name="ANSWER" value={{ ANSWER }}><br>
-        <br>
-        <button id="test" onclick="checkAns()">submit</button>
-    </form>-->
-    <p id = "ans"style="display:none">{{ question[selectors[1]] }}</p>
+    <p id = "ans"style="display:none">{{ question[0][selectors[1]] }}</p>
     <p id="results"></p>
-    <a class="but" href="/quiz?mode=Single-Q&topic={{ topic }}">Next Question &#10148;</a>
+    <a class="but1" href="/quiz?mode=Single-Q&topic={{ topic }}">Next Question &#10148;</a>
 </div>
 <div id="quizT" style="display: none">
     {% for i in range(5) %}
-        <h4>Question goes here</h4>
+        <h4>{{ question[i][selectors[0]]}}</h4>
         <input type="text" id="q{{ i }}" placeholder="Enter Answer">
+        <p id="result{{ i }}" style="display:none">result for question {{ i }} goes here</p>
         <br>
+        <p id="ans{{ i }}" style="display:none">{{ question[i][selectors[1]] }}</p>
     {% endfor %}
-    <button class="but1">SUBMIT</button>
+    <button class="but" onclick="checkTest()">SUBMIT</button>
 </div>
 <p id="message" style="display: none;">mode not available</p>
 <p id="topic" style="display: none"></p>

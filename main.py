@@ -190,38 +190,44 @@ def quiz():
         'sports':'sportsleisure'
     }
     topic = request.args.get('topic')
-    if topic == "math":
-        url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=random.randint(0,40))
-        querystring = {"fragment":"v8","notfound":"floor","json":"true"}
-        headers = {
-            'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-            'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
-        }
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        output = json.loads(response.text)
-        selectors = ['text','number']
-    elif topic in list(possible_topics.keys()):
-        url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
-        querystring = {"category":possible_topics[topic.lower()]}
-        headers = {
-            'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-            'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
-        }
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        output = json.loads(response.text)[0]
-        selectors=['question','answer']
-    else:
-        url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
-        headers = {
-            'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
-            'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
-        }
-        response = requests.request("GET", url, headers=headers)
-        output=json.loads(response.text)[0]
-        selectors=['question','answer']
-    mode='Single-Q'
+    mode='test'
     if request.form:
         mode = request.form['mode']
+    output=[]
+    if mode=='Single-Q':
+        num=1
+    else:
+        num=5
+    for i in range(num):
+        if topic == "math":
+            url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=random.randint(0,40))
+            querystring = {"fragment":"v8","notfound":"floor","json":"true"}
+            headers = {
+                'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+                'x-rapidapi-key': "a217c5e6c1msh46f25df6216c5aap19e736jsn947379489fc9"
+            }
+            response = requests.request("GET", url, headers=headers, params=querystring)
+            output.append(json.loads(response.text))
+            selectors = ['text','number']
+        elif topic in list(possible_topics.keys()):
+            url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+            querystring = {"category":possible_topics[topic.lower()]}
+            headers = {
+                'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+                'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+            }
+            response = requests.request("GET", url, headers=headers, params=querystring)
+            output.append(json.loads(response.text)[0])
+            selectors=['question','answer']
+        else:
+            url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
+            headers = {
+                'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
+                'x-rapidapi-key': "6279ac9b7amsh7dc015c7d7746fbp1f4d65jsn125b0c500438"
+            }
+            response = requests.request("GET", url, headers=headers)
+            output.append(json.loads(response.text)[0])
+            selectors=['question','answer']
     return render_template("quiz.html", question=output, selectors=selectors,topic=topic,mode=mode)
 
 @app.route('/gaem/')
