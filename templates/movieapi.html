@@ -11,13 +11,15 @@
 <p>What year was {{ moviequiz['Title']}} released in?</p>
 
 <script>
+    let answer = {{moviequiz ['Year']}};
     function check(){
-        if (document.getElementById("input").value == document.getElementById("answer").innerText) {
+        if (document.getElementById("input").value == answer) {
             document.getElementById("results").innerText = "correct"
         } else {
             document.getElementById("results").innerText = "wrong"
         }
-        document.getElementById("AI").innerText = document.getElementById("answer").innerText
+        document.getElementById("AI").innerText = answer
+
     }
 </script>
 <!--Conditional-->
@@ -25,13 +27,13 @@
 <!--Line 16: If it is then the text displays correct-->
 <!--Line 17-18: If it does not equal then the text displays wrong-->
 <style>
-    button{
+    .button{
         background-color: #0e387a;
         color: #ffffff;
         border-radius: 10px;
         height: 45px;
         width: 130px;
-
+        text-decoration: none;
     }
 </style>
 
@@ -45,7 +47,9 @@
 
 <button class="button" onclick="check()">Submit</button>
 
-<p id="answer">{{moviequiz ['Year']}}</p>
+<button class="button">
+    <a class="button" href="/movieapi/">Next Question</a>
+</button>
 
 <div class="card" style=
         "color: #ffffff;
