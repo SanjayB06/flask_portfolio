@@ -194,12 +194,13 @@ def quiz():
     if request.form:
         mode = request.form['mode']
     output=[]
-    if mode=='Single-Q':
-        num=1
-    else:
-        num=5
-    for i in range(num):
-        if topic == "math":
+    qs = {
+        'Single-Q':1,
+        'test':5
+    }
+    num = qs[mode]
+    if topic == "math":
+        for i in range(num):
             url = "https://numbersapi.p.rapidapi.com/{num}/trivia".format(num=random.randint(0,40))
             querystring = {"fragment":"v8","notfound":"floor","json":"true"}
             headers = {
@@ -208,8 +209,9 @@ def quiz():
             }
             response = requests.request("GET", url, headers=headers, params=querystring)
             output.append(json.loads(response.text))
-            selectors = ['text','number']
-        elif topic in list(possible_topics.keys()):
+        selectors = ['text','number']
+    elif topic in list(possible_topics.keys()):
+        for i in range(num):
             url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
             querystring = {"category":possible_topics[topic.lower()]}
             headers = {
@@ -218,8 +220,9 @@ def quiz():
             }
             response = requests.request("GET", url, headers=headers, params=querystring)
             output.append(json.loads(response.text)[0])
-            selectors=['question','answer']
-        else:
+        selectors=['question','answer']
+    else:
+        for i in range(num):
             url = "https://trivia-by-api-ninjas.p.rapidapi.com/v1/trivia"
             headers = {
                 'x-rapidapi-host': "trivia-by-api-ninjas.p.rapidapi.com",
@@ -227,7 +230,7 @@ def quiz():
             }
             response = requests.request("GET", url, headers=headers)
             output.append(json.loads(response.text)[0])
-            selectors=['question','answer']
+        selectors=['question','answer']
     return render_template("quiz.html", question=output, selectors=selectors,topic=topic,mode=mode)
 
 @app.route('/gaem/')

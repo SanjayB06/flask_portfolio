@@ -39,10 +39,14 @@
         function checkAns() {
             let answer = document.getElementById("ans").innerText;
             let userAns = document.getElementById("userans").value
+            document.getElementById("results").style.fontWeight = "900"
             if (userAns.toLowerCase()==answer.toLowerCase()) {
                 document.getElementById("results").innerText="THE ANSWER IS CORRECT"
+                document.getElementById("results").style.color="#5eff89"
             } else {
                 document.getElementById("results").innerText= ("your answer is incorrect. the correct answer is \""+answer + "\". you answered \"" + userAns+"\"")
+                document.getElementById("results").style.color="#ff4040"
+
             }
 
         }
@@ -50,12 +54,17 @@
             for (let i=0;i<5;i++){
                 let answer = document.getElementById("ans" + i).innerText;
                 let userAns = document.getElementById("q" + i).value;
+                document.getElementById("result"+i).style.fontWeight = "900"
                 if (userAns.toLowerCase() == answer.toLowerCase()) {
                     document.getElementById("result" + i).innerText = "THE ANSWER IS CORRECT";
                     document.getElementById("result"+i).style.display="block"
+                    document.getElementById("result"+i).style.color="#5eff89"
+
                 } else {
                     document.getElementById('result' + i).innerText = ("The answer is incorrect. The correct answer is \""+answer+"\". You answered \""+userAns+"\".");
                     document.getElementById("result"+i).style.display="block"
+                    document.getElementById("result"+i).style.color="#ff4040"
+
 
                 }
             }
@@ -102,7 +111,7 @@
             border-radius: 10px;
         }
         .quiz input:focus {
-            background-color: #ffffff;
+            background-color: #c5d3ff;
             outline: none;
             border: none;
         }
@@ -116,7 +125,35 @@
             text-decoration: none;
             color: #000000;
         }
-        .but,.but1 {
+        /* test quiz styles */
+        #quizT {
+            padding: 1.5em;
+            background-color: #0e387a;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .question h4 {
+            color: white;
+            font-size: 20px;
+        }
+
+        .testButton {
+            width: 80%;
+            padding: 1em;
+            font-size: 14px;
+            outline: none;
+            border: none;
+        }
+        .testButton:focus {
+            background-color: #c5d3ff;
+
+        }
+
+        .testresult{
+            width:80%;
+        }
+        /* button styles*/
+        .but,.but1,.testbut {
             margin-top: 20px;
             font-size: 14px;
             padding: .5em 2em;
@@ -131,7 +168,7 @@
             border: 2px solid #0e387a;
             color: black;
         }
-        body.dark-theme .but,body.dark-theme .but1 {
+        body.dark-theme .but,body.dark-theme .but1, .testbut {
             border: 2px solid darkorange;
             color: white;
         }
@@ -139,9 +176,9 @@
             background-color: #0e387a;
             color: #ffffff;
         }
-        body.dark-theme .but:hover, body.dark-theme .but1:hover {
+        body.dark-theme .but:hover, body.dark-theme .but1:hover,  .testbut:hover {
             background-color: darkorange;
-            color: #0e387a;
+            color: white;
         }
 
     </style>
@@ -170,7 +207,7 @@
         <input type="radio" name="topic" id="geography" value="geography">
         <label for="radio">Geography</label><br>
         <input type="radio" name="topic" id="math" value="math">
-        <label for="radio">Math/Number</label><br>
+        <label for="radio">Number</label><br>
         <input class="but" type="submit" value="Submit">
     </form>
 
@@ -186,13 +223,17 @@
 </div>
 <div id="quizT" style="display: none">
     {% for i in range(5) %}
-        <h4>{{ question[i][selectors[0]]}}</h4>
-        <input type="text" id="q{{ i }}" placeholder="Enter Answer">
-        <p id="result{{ i }}" style="display:none">result for question {{ i }} goes here</p>
+        <div class="question">
+            <h4>{{ question[i][selectors[0]]}}</h4>
+            <input type="text" class='testButton' id="q{{ i }}" placeholder="Enter Answer">
+            <p class="testresult" id="result{{ i }}" style="display:none">result for question {{ i }} goes here</p>
+        </div>
         <br>
         <p id="ans{{ i }}" style="display:none">{{ question[i][selectors[1]] }}</p>
     {% endfor %}
-    <button class="but" onclick="checkTest()">SUBMIT</button>
+    <button class="testbut" onclick="checkTest()" style="margin-bottom: 15px;font-size: 16px">SUBMIT</button>
+    <br>
+    <a href="/quiz?mode=test&topic={{ topic }}" class="testbut" style="font-size: 16px">Next Test &#10148;</a>
 </div>
 <p id="message" style="display: none;">mode not available</p>
 <p id="topic" style="display: none"></p>
