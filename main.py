@@ -161,6 +161,10 @@ def study_general():
 def instructions():
     return render_template("instructions.html")
 
+@app.route('/navigationquiz/')
+def navigationquiz():
+    return render_template("navigationquiz.html")
+
 @app.route('/movieapi/')
 def movieapi():
     url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
@@ -177,6 +181,25 @@ def movieapi():
     print(data)
     return render_template("movieapi.html", moviequiz=data)
 # add code to see if the movie title exists, if it doesn't repull
+
+@app.route('/Wireframes/')
+def Wireframes():
+    return render_template("Wireframes.html")
+
+@app.route('/historyquiz/')
+def historyquiz():
+    url = "https://numbersapi.p.rapidapi.com/6/21/date"
+
+    querystring = {"fragment":"true","json":"true"}
+
+    headers = {
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "befd3aa94cmsh6c15f9448db64f3p194824jsn7727f7079e12"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    output = json.loads(response.text)
+    return render_template("historyquiz.html",questions=output)
 
 @app.route('/quiz/',methods=['GET','POST'])
 def quiz():
@@ -255,3 +278,4 @@ def mathtrivia():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
