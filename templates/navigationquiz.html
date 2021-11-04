@@ -1,0 +1,151 @@
+{% include "ournav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebsiteTrivia</title>
+    <style>
+    body{
+    font-size: 23px;
+    font-family: sans-serif;
+    color: #333;
+    }
+    .question{
+    font-weight: 600;
+    }
+    .answers {
+    margin-bottom: 20px;
+    }
+    #submit{
+    font-family: sans-serif;
+    font-size: 22px;
+    background-color: #2f56ef;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    }
+    #submit:hover{
+    background-color: #4362b9;
+    }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center;padding-top:20px;">Website Quiz</h1>
+<div id="quiz"></div>
+<button id="submit">Submit Answers</button>
+<div id="results"></div>
+<script>
+    var myQuestions = [
+        {
+            question: "Where can you find the different trivia topics?",
+            answers: {
+                a: 'Modes',
+                b: 'General',
+                c: 'Home'
+            },
+            correctAnswer: 'a'
+        },
+
+        {
+            question: "How do you use the navigation bar?",
+            answers: {
+                a: 'Click everything',
+                b: 'Hover over the dropdowns and click the options',
+                c: "Don't use it"
+            },
+            correctAnswer: 'b'
+        },
+        {
+            question: "What is the single question mode?",
+            answers: {
+                a: 'You type into a textbox the answer',
+                b: 'You choose a multiple choice answer',
+                c: 'You reveal a flashcard'
+            },
+            correctAnswer: 'a'
+        },
+        {
+            question: "How does the math page work?",
+            answers: {
+                a: 'It asks general trivia about mathematicians',
+                b: 'It gives you equations that you answer',
+                c: 'You submit a number and it returns a fun fact about that number'
+            },
+            correctAnswer: 'c'
+        },
+    ];
+
+    var quizContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+
+    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+        function showQuestions(questions, quizContainer){
+            var output = [];
+            var answers;
+
+            for(var i=0; i<questions.length; i++){
+
+                answers = [];
+
+                for(letter in questions[i].answers){
+
+                    answers.push(
+                        '<label>'
+                        + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                        + letter + ': '
+                        + questions[i].answers[letter]
+                        + '</label>'
+                    );
+                }
+
+
+                output.push(
+                    '<div class="question">' + questions[i].question + '</div>'
+                    + '<div class="answers">' + answers.join('') + '</div>'
+                );
+            }
+
+
+            quizContainer.innerHTML = output.join('');
+        }
+
+
+        function showResults(questions, quizContainer, resultsContainer){
+
+            var answerContainers = quizContainer.querySelectorAll('.answers');
+            var userAnswer = '';
+            var numCorrect = 0;
+
+            for(var i=0; i<questions.length; i++){
+
+
+                userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+
+                if(userAnswer===questions[i].correctAnswer){
+                    numCorrect++;
+                    answerContainers[i].style.color = 'darkgreen';
+                }
+                else{
+                    answerContainers[i].style.color = 'red';
+                }
+            }
+            resultsContainer.innerHTML = numCorrect + ' / ' + questions.length;
+        }
+
+        showQuestions(questions, quizContainer);
+
+        submitButton.onclick = function(){
+            showResults(questions, quizContainer, resultsContainer);
+        }
+
+    }
+</script>
+</body>
+</html>
