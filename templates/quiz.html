@@ -51,6 +51,7 @@
 
         }
         function checkTest() {
+            let correct=0;
             for (let i=0;i<5;i++){
                 let answer = document.getElementById("ans" + i).innerText;
                 let userAns = document.getElementById("q" + i).value;
@@ -59,6 +60,7 @@
                     document.getElementById("result" + i).innerText = "THE ANSWER IS CORRECT";
                     document.getElementById("result"+i).style.display="block"
                     document.getElementById("result"+i).style.color="#5eff89"
+                    correct+= 1;
 
                 } else {
                     document.getElementById('result' + i).innerText = ("The answer is incorrect. The correct answer is \""+answer+"\". You answered \""+userAns+"\".");
@@ -67,6 +69,8 @@
 
 
                 }
+            let percent = (correct/5)*100;
+            document.getElementById("score").innerText = "Your score was " + percent + "% ("+correct+"/5)."
             }
         }
 
@@ -135,6 +139,7 @@
         .question h4 {
             color: white;
             font-size: 20px;
+            width: 80%;
         }
 
         .testButton {
@@ -232,6 +237,7 @@
         <p id="ans{{ i }}" style="display:none">{{ question[i][selectors[1]] }}</p>
     {% endfor %}
     <button class="testbut" onclick="checkTest()" style="margin-bottom: 15px;font-size: 16px">SUBMIT</button>
+    <p id="score" style="color:white"></p>
     <br>
     <a href="/quiz?mode=test&topic={{ topic }}" class="testbut" style="font-size: 16px">Next Test &#10148;</a>
 </div>

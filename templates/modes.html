@@ -90,7 +90,11 @@
             <div class="text">
                 <h3>{{ x['topic'] }}</h3>
                 <p>{{ x['Description'] }}</p>
-                <a href="/quiz?mode=Single-Q&topic={{ x['topic'] }}/">Play Topic</a>
+                {% if x['exists'] == True%}
+                    <a href="/quiz?mode=Single-Q&topic={{ x['param'] }}/">Play Topic</a>
+                {% else %}
+                    <a href="/nonexistent/">Play Topic</a>
+                {% endif %}
             </div>
         </div>
     {% endfor  %}
