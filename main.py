@@ -134,20 +134,18 @@ def start():
     topic = [
         {"topic": "Animal Trivia","param":"animals","Description":"Can you guess the animals?","image1":"/static/assets/silhouette-animal-clipart-11.jpg","exists":False},
         {"topic": "Movie Trivia","param":"movies","Description":"Match famous movie quotes with your favorite movies","image1":"/static/assets/Movie.png","exists":False},
-        {"topic": "Geography Trivia","param":"geography","Description":"Test your geography knowledge with this trivia","image1":"../static/assets/Globe.JPG","exists":False},
-        {"topic": "America Trivia","param":"america","Description":"Test what you know about America, including historical events and laws","image1":"/static/assets/AmericanFlag.jfif","exists":False},
+        {"topic": "Geography Trivia","param":"geography","Description":"Test your geography knowledge with this trivia","image1":"../static/assets/Globe.png","exists":True},
+        {"topic": "America Trivia","param":"america","Description":"Test what you know about America, including historical events and laws","image1":"/static/assets/america.png","exists":False},
         {"topic": "Planet Trivia","param":"space","Description":"What do you know about the planets in our solar system?","image1":"../static/assets/SaturnSilhoutte.png","exists":False},
         {"topic": "Food Trivia","param":"food","Description":"See if you know where these popular food items originated from","image1":"/static/assets/Fastfood.JPG","exists":False},
-        {"topic": "History and Holidays","param":"history","Description":"How much do you know about world history and holidays? Test your knowledge with this quiz!","image1":"/static/assets/Fastfood.JPG","exists":True},
-        {"topic": "Science","param":"science","Description":"Are you a science whiz? Test yourself with our science quiz.","image1":"/static/assets/Fastfood.JPG","exists":True},
-        {"topic": "Sports","param":"sports","Description":"How much do you know about sports?","image1":"/static/assets/Fastfood.JPG","exists":True},
-        {"topic": "Numbers","param":"numbers","Description":"How many years in a lunation? How many bits in a falseColor image? If you can answer questions about numbers, try the Number trivia quiz!","image1":"/static/assets/Fastfood.JPG","exists":True}
-
-
+        {"topic": "History and Holidays","param":"history","Description":"How much do you know about world history and holidays? Test your knowledge with this quiz!","image1":"/static/assets/history.png","exists":True},
+        {"topic": "Science","param":"science","Description":"Are you a science whiz? Test yourself with our science quiz.","image1":"/static/assets/science.png","exists":True},
+        {"topic": "Sports","param":"sports","Description":"How much do you know about sports?","image1":"/static/assets/sports_1.png","exists":True},
+        {"topic": "Numbers","param":"math","Description":"How many years in a lunation? How many bits in a falseColor image? If you can answer questions about numbers, try the Number trivia quiz!","image1":"/static/assets/numbers.jpeg","exists":True}
     ]
     modes = [
-        {'name':'Single Question','param':'Single-Q','Description':"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at metus sed est imperdiet suscipit. Nam semper nulla vitae diam rhoncus feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus euismod orci dictum congue. Nulla eget lectus faucibus, feugiat leo vel, dapibus arcu. "},
-        {'name':'Test','param':'test','Description':"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at metus sed est imperdiet suscipit. Nam semper nulla vitae diam rhoncus feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus euismod orci dictum congue. Nulla eget lectus faucibus, feugiat leo vel, dapibus arcu. "}
+        {'name':'Single Question','param':'Single-Q','Description':"A more casual game mode. Take trivia one question at a time, with no scores or stress.  "},
+        {'name':'Test','param':'test','Description':"For those who enjoy challenges and a more test-like format. Take it 5 questions at a time, and once you finish, try and see how you did. "}
     ]
     return render_template("modes.html", topics=topic,modes=modes)
 
