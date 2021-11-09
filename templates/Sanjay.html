@@ -3,10 +3,92 @@
 
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
+<script type="text/javascript" src="/static/theme.js">
 
+</script>
 <!- This is a replacement block for Body in base.html -->
-{% block body %}
+<body onload="checkMode()">
+
     <style>
+    body.light-theme {
+        color: black;
+    }
+    body.dark-theme {
+        color: white
+    }
+    #header {
+        display: flex;
+        justify-content: space-around;
+    }
+    figure {
+        width: 45%;
+
+    }
+    .text {
+        width: 45%;
+        text-align: center;
+        padding: 3em;
+    }
+    .text h1 {
+        position: relative;
+        font-size: 72px;
+        animation: name;
+        animation-duration: 3s;
+    }
+    @keyframes name {
+        0% {
+            right: -1000px
+        }
+        100% {
+            right: 0px
+        }
+    }
+    .text h4{
+        margin-top: 20px;
+        font-size: 24px;
+        animation: role;
+        animation-duration: 6s;
+    }
+    @keyframes role {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }
+    .text p {
+        margin-top: 10px;
+        animation: about;
+        animation-duration: 6s;
+    }
+    @keyframes about {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+    figure img {
+        max-height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: 50px;
+        animation: img;
+        animation-duration: 4s;
+    }
+    @keyframes img {
+        0% {
+            left: -1000px
+        }
+        100% {
+            left: 50px
+        }
+
+    }
     h1 {
         text-align: center;
     }
@@ -17,37 +99,80 @@
         width: 80%;
         margin: 0 auto;
     }
+    .center-block {
+        display: grid;
+        grid-template-columns: 50%;
+        margin: 0 auto;
+        justify-content: center;
+        animation: everything;
+        animation-duration: 8s;
+    }
+    @keyframes everything {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+    #name {
+        margin-top: 10px;
+        width: 80%;
+        padding: 1em;
+        outline: none;
+        border: none;
+    }
+    #name:focus {
+        background-color: #c5d3ff;
+    }
+     #button {
+         margin-top: 10px;
+         margin-bottom: 10px;
+         width: 80%;
+         padding: 1em;
+         background-color: transparent;
+         border: 2px solid #0e387a;
+         transition: .5s background-color, .5s color;
+    }
+    #button:hover {
+        background-color: #0e387a;
+        color: darkorange;
+    }
+
     </style>
     <!- Try building a new body here ->
     <div class="smb_container">
-        <h1>Sanjay Bharadwaj</h1>
+        <section id="header">
+            <figure>
+                <img src="/static/assets/sanjay.JPG" alt="Sanjay">
+            </figure>
+            <div class="text">
+                <h1>Sanjay Bharadwaj</h1>
+                <h4>Scrum Master</h4>
+                <p>I'm Sanjay! I'm a sophomore at DNHS and I'm really excited to welcome you to our project. I enjoy web development and computer science. Outside of this, I like reading, watching TV, and sports like soccer and tennis. </p>
+            </div>
+        </section>
 
-        <h2>Greet MiniLab</h2>
         <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
-
+            <h2>Greet MiniLab</h2>
             <div class="col-12">
                 <p>Hello, {{name}}!</p>
             </div>
 
             <div class="col-12">
                 <form action="/greet_Sanjay" id="greet" method="POST" >
-                    <label for="name">Type a greeting name?</label>
-                    <input name="name" id="name">
-                    <input type="submit" value="Greetings!">
+                    <label for="name">Type a greeting name?</label><br>
+                    <input name="name" id="name" placeholder="What's your name?"><br>
+                    <input type="submit" value="Greetings!" id="button">
                 </form>
             </div>
 
-            <div class="col-12">
-                <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+            <div class="col-12" id="image">
+                <img src="/static/assets/PythonFlask.jpeg" style="width: 100%" >
             </div>
 
 
 
     </div>
-
-{% endblock %}
-
-<!- This is turning off birds background from base.html -->
-{% block background %}
-{% endblock %}
-</div>
+    </div>
+</body>
